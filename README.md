@@ -34,11 +34,12 @@ Lista de abreviaturas utilizados no meio da microeletrônica;
 |_IDMs_| Integrated Device Manufacturers | Eles mesmos projetam, fabricam e vendem seus chips. Exemplo: Micron, Intel, Analog Devices |
 |_WFE_| Wafer Fab Equipment | Máquinas que fabricam chips. Exemplos: Applied Materials, KLA, LAM, Tokyo Electron e ASML |
 |_OSAT_| Outsourced Semiconductor Assembly and Test | Fábricas que encapsulam e testam os chips das foundries |
+|_DH_| Design House | São empresas especializadas em alguma etapa do VLSI, que atuam nas Fabs ou Fabless. Basicamente, projetam para outras empresas e não para sí mesmo. Agindo como uma terceirizada.|
 |_Layout_|  | É a planta do CI. |
 |_Reticles_|  | Ferramenta que contém uam imagem de padrão que precisa ser repetida em etapas para expor todo o wafer ou mask |
 |_Mask Layer_|  | São as camadas das máscaras, geralmente representado por diferentes cores. Exemplo: Metal, poly, n+diff, Contact.. etc |
 |_Mask Data_|  | É o arquivo final que descrevem todas as máscaras do chip, geralmente em formato OASIS ou GDSII |
-|_DRC_| Design Rules Check | São as regras de fabricação da tecnologia utilizada no qual o Layout deve obedecer. |
+|_DRC_| Design Rules Check | São as regras de fabricação da tecnologia utilizada no qual o Layout deve obedecer. Sejam elas, checagem de células, signof, rout, struturas, names, maps..|
 |_PUN_| Pull-Up | "Puxar para cima". São PMOS conectados em paralelo ligado ao VDD, localizado na parte superior para evitar curto circuito na conexão CMOS.  |
 |_PDN_| Pull-Down | "Puxar para baixo". São NMOS conectados em série ligado ao GROUND, localizado na parte inferior para evitar curto circuito na conexão CMOS. |
 |_MOSFETs_| Metal-Oxide-Semiconductor Field-Effect Transistor | Transistor usado para chaveamento e amplificação em circuitos integrados |
@@ -74,51 +75,52 @@ Lista de abreviaturas utilizados no meio da microeletrônica;
 | Sigla | Nome completo | Descrição |
 |------|--------------|----------|
 |_VLSI_| Very Large-Scale Integration | É toda a sequência de etapas para transformar um descrição de RTL até sua fabricação. |
-|_EDA_| Electronic Design Automation | São os conjuntos de ferramentas/software utilizados ao longo de todo fluxo de desenvolvimento da elaboração do CI |
-|_SDC_| Synopsis Design Constraints |  |
+|_EDA_| Electronic Design Automation | São os conjuntos de ferramentas/software utilizados ao longo de todo fluxo de desenvolvimento da elaboração do CI. |
 |_GTECH_| Generic Technology | Biblioteca padrão de celúlas genéricas da EDA utilizadas na etapa intermediária da síntese |
 |_NLDM_| Non-Linear Delay Model | Modelo mais antigo da .ln (less acurate), modelo não linear. |
 |_CCS_| Composite Current Source | Modelo mais antigo da .ln (more acurate) |
-|_NLPM_| Natural language programming linter  |  |
-|_LVF_| Liberty variation format  |  |
+|_NLPM_| Natural language programming linter  | Biblioteca que possui o tipo de modelagem de potência, com dados |
 |_STA_| Static timing Analysis | Técnica para verificar o timing do circuito digital (fechou ou não?), rápido e exaustivo |
 |_DTA_| Dynamic timing Analysis | Técnica para analisar timing do cricuito utilizando vetores de testes, testes específicos, mais lento. |
-|_HDL_| Hardware Description Language |  |
-|_TLF_| Timing Library Format |  |
-|_LEF_| Library Exchange Format  |  |
-|_DSCL_| Digital Standard Cell Library |  |
+|_HDL_| Hardware Description Language | Linguagem de programação que possui o paradigma de descrever o comportamento de circuitos digitais e estruturasd e hardwares  |
+|_LVF_| Liberty Variation Format | Extensão do formato Liberty que modela variações estatísticas (processo, tensão, temperatura) para análise de timing mais precisa |
+|_TLF_| Timing Library Format | Arquivo que descreve características de timing das células padrão | Entrada (input) para ferramentas de síntese e STA |
+|_LEF_| Library Exchange Format | Descreve geometria simplificada das células para uso em place & route | Entrada (input) para ferramentas físicas |
+|_DSCL_| Digital Standard Cell Library | Conjunto de células padrão digitais (com lógica, layout e timing) | Base de entrada (input) para todo o fluxo EDA |
+|_DEF_| Design Exchange Format | Descreve a implementação física do design (placement, roteamento e conexões) | Saída do place & route e entrada para ferramentas de verificação física |
+|_LIB_| Liberty Timing File | Arquivo (.lib) que descreve timing, potência e função lógica das células padrão | Entrada (input) para síntese, STA e otimizações
+|_SDC_| Synopsis Design Constraints | Formato de arquivo padrão, baseado em TCL desenvolvida pela Synopsis, para definir restições de PPA, utilizado no processo de síntese. |
+|_FRAM_| "Frame" | Similar ao LEF, descreve também o formato físico das células. |
 |_GDSII_| Graphic Design System II | É o formato padrão de arquivo usado para representar o layout físico (Atual)|
-|_GDSI_| Graphic Design System I | É o formato padrão de arquivo usado para representar o layout físico (Antigo/obsoleto) |
-|_DEF_| Design Exchange Format |  |
-|_ASCII_| American Standard Code for Information Interchange  |  |
-|_LIB_| Liberty Timing File |  |
-|_STANDART CELL_|  | São as células padrão caracterizadas pertencentes ao PDK |
+|_GDSI_| Graphic Design System I | É o formato padrão de arquivo usado para representar o layout físico (Antigo/obsoleto) | 
+|_OASIS_| Open Artwork system intechange standard | Outro tipo de formato (Open-source) para representar um design físico |
+|_ASCII_| American Standard Code for Information Interchange  | É o padrão de codificação de caracteres em valores númericos |
+|_SCL_| Standart Cell | São as células padrão caracterizadas pertencentes ao PDK |
 |_CELL_|  | Quaisquer tipo de "componente" ou unidade de um projeto CI, podendo ser um mux, transitor, etc |
-|_BUS_|  |  |
-|_PINS_|  | Pontos de conexões do circuito, seja entrada ou saída. |
-|_GRID_|  |  |
-|_FRAM_| "Frame" | Similar ao LEF, descreve também o formato físcico das células |
-|_LVS_| Layout Versus Schematics |  |
+|_BUS_|  | Barramento é o meio físico de conexão entre blocos, por onde os sinais passam. Ela é regida por um protcolo, que são as regras de como funciona essa comunicação. |
+|_PI/PO_| Pins | Pontos de conexões do circuito, seja entrada ou saída. |
+|_GRID_| Grid | Malha de referência usada no layout para alinhar e posicionar células e interconexões | Base de entrada (input) para ferramentas de layout físico ||
+|_LVS_| Layout Versus Schematic | Verifica se o layout físico corresponde ao esquemático (conectividade e dispositivos) | Saída do layout e entrada para verificação física (sign-off) |
 |_ESD_| Electrostatic Discharge | É aquela descarga de eletricidade estática (tipo quando você leva um choque ao tocar algo), que pode danificar o chip, e pinos |
-|_CORE_|  | Fornece a funcionalidade básica de um circuito integrado, o coração do CI |
-|_HBM_| Human Body Model |  |
+|_UPF_| Unified Power Format | Literalmente, um formato/padrão para descrever como a energia pode-se organizar dentro de um CI |
+|_TCL_| Tool Command Language | Linguagem de script usada para automatizar e controlar ferramentas EDA  |
+|_CORE_|  | O coração do CI, ou melhor, o cérebro. Fornece a funcionalidade básica de um circuito integrado. |
+|_HBM_| Human Body Model | É uma simulação usando o modelo humano quando há uma descarga elétrica no circuito. Pode ser usado em outras ocasiões. |
 |_RTL_| Register Transfer Level | É um nível de abstração da representação de projetos digitais utilizando HDL na etapa de Design |
 |_SKEW_|  | É a velocidade de transicação do dado, a diferença entre entre o tempo que o sinal sai e chega |
 | HTML | HyperText Markup Language |
-|_DUTY CYCLE_|  |  |
+|_DUTY CYCLE_| Duty Cycle | Razão entre o tempo em nível alto e o período total de um sinal periódico (geralmente em %) Parâmetro de entrada (input) para análise de timing e projeto de clock |
 |_CTS_| Clock Tree Synthesis |  |
-|_PPA_| Power, Performance, and Area |  |
-|_OASIS_| Open Artwork system intechange standard |  |
-|_UPF_| Unified Power Format | Literalmente, um formato/padrão para descrever como a energia pode-se organizar dentro de um CI |
-|_IPs_| ntellectual Propert |  |
-|_Floorplan_|  |  |
-|_Placement_|  |  |
-|_Site_|  |  |
-|_FPGA_| Field-Programmable Gate Array |  |
-|_PlD_| Programmable Logic Device |  |
-|_MPGA_| Mask Programmable Gate Arrays |  |
-|_CPLD_| Complex Programmable Logic Device |  |
-|_SPLD_| Simple Programmable Logic Device |  |
+|_PPA_| Power, Performance, and Area | São as principais métricas para definirmos em um projeto de CI, a partir da especificação do projeto.|
+|_IPs_| Intellectual Property | São blocos de circuitos projetados, verificados e reutilizeveis em projetos, no qual uma empresa é detentora do seu design. |
+|_Floorplan_|  | Consiste no roteamento de vias que serão utilizados para alimentação das standard cell. São determinadas as localizações, formas, tamanhos dos módulos do chip e são estimadas a área do chip, atrasos e congestionamentos de fios, dessa maneira fornecendo a base para o leiaute. |
+|_Placement_|  | Trata do processo de alocar as Standard Cells no design proposto |
+|_Site_|  | Um site é a unidade básica de posicionamento (grid) onde as standard cells podem ser colocadas no layout. |
+|_FPGA_| Field-Programmable Gate Array | Dispositivo reconfigurável composto por blocos lógicos e interconexões programáveis |
+|_PLD_| Programmable Logic Device | Categoria de dispositivos digitais programáveis usados para implementar lógica |
+|_MPGA_| Mask Programmable Gate Array | Dispositivo programado por máscara na fabricação, com interconexões definidas na foundry |
+|_CPLD_| Complex Programmable Logic Device | PLD com múltiplos blocos lógicos e interconexões previsíveis, bom para controle |
+|_SPLD_| Simple Programmable Logic Device | PLD simples com poucos recursos, usado para lógica básica |
 |_Budget_|  | Uma restrição de projeto, onde definimos o nosso caminho de desenvolvimento, seja ele timing, power ou area |
 
 ***
@@ -191,19 +193,19 @@ Lista de abreviaturas utilizados no meio da microeletrônica;
 |_CMP_| Chemical mechanical planarization |  |
 |_Qor_| Quality of results |  |
 |_Qos_| Quality of Silicon |  |
-|_Tie-high_|  |  |
-|_Tie-low_|  |  |
-|_Tie-Cell_|  | Células padrão usadas para constantes lógicas (1/VDD ou 0/GROUND) |
+|_Tie_| Tie cell | Células padrão usadas para constantes lógicas (1/VDD ou 0/GND) |
+|_TIEHI_| Tie-high | Células com sinal fixo em 1/VDD |
+|_TIELO_| Tie-low | Células com sinal fixo em 0/GND |
 
 ***
 
 ### Fundamentos de Designs Digitais <a name = "idDD"></a>
 | Sigla | Nome | Descrição |
 |-------|------|-----------|
-|_BCD_| Binary-Coded Decimal |  |
+|_BCD_| Binary-Coded Decimal | Codificação de decimal para 4 bits binários |
 |_MSB_| Most Significant Bit |  |
 |_LSB_| Least Significant Bit |  |
-|_Gray_|  |  |
+|_Gray_| Gray Codwe  | Codificação binária em que apenas um bit muda entre valores consectuvios |
 |_Karnaugh maps_|  |  |
 |_SOM_| Product of maxterms |  |
 |_POM_| Sum of minterms |  |
@@ -223,11 +225,11 @@ Lista de abreviaturas utilizados no meio da microeletrônica;
 |_storage_|  |  |
 |_sequential logic circuits_|  |  |
 |_combinational logic circuits_|  |  |
-|_edge_|  |  |
+|_edge_|  | É a borda, que é o período de transicação do sinal. (Transitório) |
 |_edge triggerd_|  |  |
+|_FSM_| Finite State Machine |  |
 |_mealy MODEL_|  |  |
 |_moore MODEL_|  |  |
-|_FSM_| Finite State Machine |  |
 |_minimum clock_|  |  |
 |_maximum clock_|  |  |
 |_Clock gating_|  | Técnica usada em circuitos digitais para economizar energia, desligando sinal de clock em partes do circuito. |
@@ -262,7 +264,6 @@ Lista de abreviaturas utilizados no meio da microeletrônica;
 |_semaphore_|  |  |
 |_mailbox_|  |  |
 |_Event_|  | Um evento é ação no tempo zero. Ou seja, uma mudança instântanea que ocorre em determinado ponto. |
-|_Testbench_|  |  |
 |_Constraints_|  | Especificações definida pelo budget do projeto, podendo conter timing, power, etc.. |
 |_TBs_| Testbenchs (wrappers) |  |
 |_DUV_| Device under verification |  |
