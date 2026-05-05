@@ -108,7 +108,6 @@ Lista de abreviaturas utilizados no meio da microeletrônica;
 |_HBM_| Human Body Model | É uma simulação usando o modelo humano quando há uma descarga elétrica no circuito. Pode ser usado em outras ocasiões. |
 |_RTL_| Register Transfer Level | É um nível de abstração da representação de projetos digitais utilizando HDL na etapa de Design |
 |_SKEW_|  | É a velocidade de transicação do dado, a diferença entre entre o tempo que o sinal sai e chega |
-| HTML | HyperText Markup Language |
 |_DUTY CYCLE_| Duty Cycle | Razão entre o tempo em nível alto e o período total de um sinal periódico (geralmente em %) Parâmetro de entrada (input) para análise de timing e projeto de clock |
 |_CTS_| Clock Tree Synthesis |  |
 |_PPA_| Power, Performance, and Area | São as principais métricas para definirmos em um projeto de CI, a partir da especificação do projeto.|
@@ -128,15 +127,17 @@ Lista de abreviaturas utilizados no meio da microeletrônica;
 ### Em VDSM <a name = "idVDSM"></a>
 | Sigla | Nome completo | Descrição |
 |------|--------------|----------|
-|_VDSM_| Very deep submicron | Uma categoria do VLSI |
+|_VDSM_| Very deep submicron | Uma categoria do VLSI de tecnologias abaixo de 0.25Um |
 |_SoCs_| System on a Chip/ System-on-Chip |  |
-|_TDD_| Time Driven Design |  |
-|_BBD_| Blocked based Design |  |
-|_PBD_| Platform based Design |  
+|_Hard Block_|  |  |
+|_Soft Block_|  |  |
+|_TDD_| Time Driven Design | Metodologia de projeto orientado ao tempo, garante que o design e o timing atenda aos requisitos. Usandos em ASIC. |
+|_BBD_| Blocked based Design | Metodologia de projetos orientados a blocos. Você pode projetar os blocos isoladamentes e ajuda no fechamento do clock. Usado em ASIC complexos e IP|
+|_PBD_| Platform based Design | Metodologia de projetos orientados a plataforma. É um nível de abstração maior, muito usado em SoCs e Plug|
 |_DVT_| Design Validation Test |  |
-|_DSM_| Deep submicron | Refere-se a tecnologias de fabricação com dimensões bem menores que 1 micrômetro |
-|_Timing Path_|  | É um caminho de ponto a ponto |
-|_Clock group_|  | Grupo de caminhos diferentes do/de sinal/sinais de clock |
+|_DSM_| Deep submicron | Refere-se a tecnologias de fabricação com dimensões bem menores que 1 micrômetro. |
+|_Timing Path_|  | É um caminho de ponto a ponto. |
+|_Clock group_|  | Grupo de caminhos diferentes do/de sinal/sinais de clock. |
 |_Slack_|  | Diferença entre o tempo necessário e o tempo de checagem (quando negativo = deu ruim) |
 |_Net timing arcs_|  |  |
 |_Net delay_|  |  |
