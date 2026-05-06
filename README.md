@@ -272,38 +272,38 @@ Lista de abreviaturas utilizados no meio da microeletrônica;
 
 | Sigla | Nome | Descrição |
 |-------|------|-----------|
-|_ASIC_| Application-Specific Integrated Circuit | CI projetado com finalidade específica |
-|_Package_|  |  |
+|_ASIC_| Application-Specific Integrated Circuit | CI projetado com finalidade específica. |
+|_Package_| IC Package | Encapsulamento físico do chip responsável por proteger o die e conectar o circuito ao ambiente externo. |
 |_Pads_|  | São as bordas do chips usados para conectar sinais de entrada/saída, VDD/GND, comunicações, etc. |
 |_Netlist_|  | É o produto da transformação feita por uma EDA de um RTL, utilizando as constraints do projeto e a tecnologia forneceida (gttech/pdk) |
-|_Gate level_|  |  |
-|_VHSIC_| Very High-speed integrated circuit |  |
-|_VHDL_| VHSIC Hardware Description Language |  |
+|_Gate level_|  |  Nível de representação digital em que o circuito é descrito usando portas lógicas e suas conexões.  |
+| _VHSIC_ | Very High-Speed Integrated Circuit | Circuito integrado desenvolvido para operar em alta velocidade. |
+| _VHDL_ | VHSIC Hardware Description Language | Linguagem de descrição de hardware usada para modelar e projetar circuitos digitais. |
 |_ports_|  | É a interface de um módulo |
 |_architecture_|  | É o que o programador vê, ou seja o que o processador faz. ISA,registradores, tipo de dados.. |
 |_ISA_| Instruction Set Architecture | Conjunto de instruções implementadas por uma arquitetura computacional |
 |_microarchitecture_|  | É como a arquitetura é implementada, ou seja, como o processador faz. Pipeline, ALU, Unidade de controle... |
-|_DUT_| Device Under Test |  |
-|_stimulus_|  |  |
-|_Assertions_|  |  |
-|_semaphore_|  |  |
-|_mailbox_|  |  |
+| _DUT_ | Device Under Test | Circuito ou sistema que está sendo testado e verificado durante simulação ou validação. |
+| _Stimulus_ | Stimulus | Conjunto de sinais ou entradas aplicados ao circuito durante testes e simulações. |
+| _Assertions_ | Assertions | Verificações usadas para garantir que o circuito esteja obedecendo condições e comportamentos esperados durante a simulação. |
+| _Semaphore_ | Semaphore | Mecanismo de sincronização usado para controlar acesso a recursos compartilhados entre processos. |
+| _Mailbox_ | Mailbox | Estrutura usada para troca de mensagens entre processos, funcionando como uma fila FIFO. |
 |_Event_|  | Um evento é ação no tempo zero. Ou seja, uma mudança instântanea que ocorre em determinado ponto. |
 |_Constraints_|  | Especificações definida pelo budget do projeto, podendo conter timing, power, etc.. |
-|_TBs_| Testbenchs (wrappers) |  |
-|_DUV_| Device under verification |  |
-|_CBS_| Cycled-based simulators |  |
-|_EBS_| Event-based simulators |  |
-|_DSP_| Digital Signal processing |
-|_OVI_| Open Verilog International ||
-|_TVM_| Test Vector Memory | Memória que armazena vetores de teste, usados junto com ATPG e BIST |
-|_ICE_| In-Circuit Emulator |  |
-|_LRM_| Verilog Language Reference Manual||
-|_PLI_| Programming Language Interface |  |
-|_VCD_| Value change dump |  |
-|_ABV_| Assertion based Verification |  |
-|_FIFO_| First in First Out |  |
-|_OVL_| Open Verification library |  |
+|_TBs_| Testbenchs (wrappers) | Ambiente de verificação que encapsula o projeto para aplicar testes, estímulos e validar o funcionamento do circuito.  |
+|_DUV_| Device Under Verification | Circuito ou sistema que está sendo verificado durante o processo de validação funcional. |
+| _CBS_ | Cycle-Based Simulators | Simuladores que executam o circuito ciclo a ciclo, focando em desempenho para projetos grandes. |
+| _EBS_ | Event-Based Simulators | Simuladores que processam mudanças de sinais e eventos ao longo do tempo no circuito. |
+| _DSP_ | Digital Signal Processing | Processamento digital de sinais usado para manipular áudio, vídeo e dados digitais. |
+| _OVI_ | Open Verilog International | Organização responsável pela padronização inicial da linguagem Verilog. |
+|_TVM_| Test Vector Memory | Memória que armazena vetores de teste, usados junto com ATPG e BIST. |
+|_ICE_| In-Circuit Emulator | Uma caxinha que pode emular o processador do sistema. Pode executar código da memória ala ou um código. Geralmente, integrado ao núcleo  |
+| _LRM_ | Language Reference Manual | Documento oficial que define regras, sintaxe e comportamento de uma linguagem de hardware. |
+| _PLI_ | Programming Language Interface | Interface que permite integrar linguagens de programação externas com simuladores Verilog. |
+| _VCD_ | Value Change Dump | Arquivo usado para armazenar mudanças de sinais durante a simulação digital. |
+| _ABV_ | Assertion-Based Verification | Método de verificação que usa assertions para validar comportamentos e regras do projeto digital. |
+| _FIFO_ | First In First Out | Estrutura de dados em que o primeiro elemento a entrar é o primeiro a sair. |
+| _OVL_ | Open Verification Library | Biblioteca de assertions reutilizáveis usada para verificação de projetos digitais. |
 |_DVE_| Discovery Visualization Environment |  |
 |_SDF_| Standard Delay Format | Estrutura de dados de saída que contém o atraso real do circuito. |
 |_PDEF_| Physical Definition File |  |
