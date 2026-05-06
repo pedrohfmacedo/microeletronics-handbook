@@ -1,4 +1,4 @@
-## Abbreviations in Microeletronics
+Preciso que você analise todo esse README.md. Os dados da tabela deve seguir o seguinte padrão | _sigla_ | nome | Descrição. | Organize. Corrija também o portugues nelas. ## Abbreviations in Microeletronics
 
 Lista de abreviaturas utilizadas no meio da microeletrônica;
 
@@ -14,12 +14,12 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 
 <a name="idCMOS"></a>
 
-<details>
+<details markdown="1">
 
 <summary><b>Em Fundamentos de semicondutores (MOSFET)</b></summary>
 
-| Sigla/Termo | Nome completo | Descrição. |
-| ------ | -------------- | ----------. |
+| Sigla/Termo | Nome completo | Descrição |
+| --- | --- | --- |
 |  | Band Gap | Diferença de energia entre a banda de valência e o banda de condução, que define a quantidade mínima de energia necessária para liberar um elétron (eV). |
 |  | Band Theory | Um modelo usado para explicar a condição de sólidos e o comportamento dos elétrons. |
 |  | Polycrystalline | Estrutura atômica do silício onde os cristais de silícios são fundidos. |
@@ -79,12 +79,12 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 
 <a name="idVLSI"></a>
 
-<details>
+<details markdown="1">
 
 <summary><b>Em VLSI</b></summary>
 
-| Sigla | Nome completo | Descrição. |
-| ------ | -------------- | ----------. |
+| Sigla | Nome completo | Descrição |
+| --- | --- | --- |
 | _VLSI_ | Very Large-Scale Integration | É toda a sequência de etapas para transformar um descrição de RTL até sua fabricação. |
 | _EDA_ | Electronic Design Automation | São os conjuntos de ferramentas/software utilizadas ao longo de todo fluxo de desenvolvimento da elaboração do CI. |
 | _GTECH_ | Generic Technology | Biblioteca padrão de celúlas genéricas da EDA utilizadas na etapa intermediária da síntese. |
@@ -138,12 +138,12 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 
 <a name="idVDSM"></a>
 
-<details>
+<details markdown="1">
 
 <summary><b>Em VDSM</b></summary>
 
-| Sigla | Nome completo | Descrição. |
-| ------ | -------------- | ----------. |
+| Sigla | Nome completo | Descrição |
+| --- | --- | --- |
 | _VDSM_ | Very deep submicron | Uma categoria do VLSI de tecnologias abaixo de 0.25Um. |
 | _SoCs_ | System-on-Chip | Chip que integra vários componentes/core/blocos em um único circuito integrado. |
 | _Hard Block_ | Hard Block | Bloco físico já pronto dentro do chip, otimizado para alta performance e menor consumo de energia. |
@@ -225,12 +225,12 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 
 <a name="idDD"></a>
 
-<details>
+<details markdown="1">
 
 <summary><b>Fundamentos de Designs Digitais</b></summary>
 
-| Sigla | Nome | Descrição. |
-| ------- | ------ | -----------. |
+| Sigla | Nome | Descrição |
+| --- | --- | --- |
 | _BCD_ | Binary-Coded Decimal | Codificação de decimal para 4 bits binários. |
 | _MSB_ | Most Significant Bit | Bit mais significativo, localizado mais à esquerda. |
 | _LSB_ | Least Significant Bit | Bit mais significativo, localizado mais à direita. |
@@ -294,12 +294,12 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 
 <a name="idASIC"></a>
 
-<details>
+<details markdown="1">
 
 <summary><b>Em ASIC designs</b></summary>
 
-| Sigla | Nome | Descrição. |
-| ------- | ------ | -----------. |
+| Sigla | Nome | Descrição |
+| --- | --- | --- |
 | _ASIC_ | Application-Specific Integrated Circuit | CI projetado com finalidade específica. |
 | _Package_ | IC Package | Encapsulamento físico do chip responsável por proteger o die e conectar o circuito ao ambiente externo. |
 |  | Pads | São as bordas do chips usadas para conectar sinais de entrada/saída, VDD/GND, comunicações, etc. |
