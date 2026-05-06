@@ -12,7 +12,12 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 
 ***
 
-### Em Fundamentos de semicondutores (MOSFET) <a name = "idCMOS"></a>
+<a name="idCMOS"></a>
+
+<details>
+
+<summary><b>Em Fundamentos de semicondutores (MOSFET)</b></summary>
+
 | Sigla/Termo | Nome completo | Descrição. |
 | ------ | -------------- | ----------. |
 |  | Band Gap | Diferença de energia entre a banda de valência e o banda de condução, que define a quantidade mínima de energia necessária para liberar um elétron (eV). |
@@ -71,7 +76,14 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 
 ***
 
-### Em VLSI <a name = "idVLSI"></a>
+</details>
+
+<a name="idVLSI"></a>
+
+<details>
+
+<summary><b>Em VLSI</b></summary>
+
 | Sigla | Nome completo | Descrição. |
 | ------ | -------------- | ----------. |
 | _VLSI_ | Very Large-Scale Integration | É toda a sequência de etapas para transformar um descrição de RTL até sua fabricação. |
@@ -124,7 +136,14 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 
 ***
 
-### Em VDSM <a name = "idVDSM"></a>
+</details>
+
+<a name="idVDSM"></a>
+
+<details>
+
+<summary><b>Em VDSM</b></summary>
+
 | Sigla | Nome completo | Descrição. |
 | ------ | -------------- | ----------. |
 | _VDSM_ | Very deep submicron | Uma categoria do VLSI de tecnologias abaixo de 0.25Um. |
@@ -205,7 +224,14 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 
 ***
 
-### Fundamentos de Designs Digitais <a name = "idDD"></a>
+</details>
+
+<a name="idDD"></a>
+
+<details>
+
+<summary><b>Fundamentos de Designs Digitais</b></summary>
+
 | Sigla | Nome | Descrição. |
 | ------- | ------ | -----------. |
 | _BCD_ | Binary-Coded Decimal | Codificação de decimal para 4 bits binários. |
@@ -268,7 +294,14 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 
 ***
 
-### Em ASIC designs <a name = "idASIC"></a>
+</details>
+
+<a name="idASIC"></a>
+
+<details>
+
+<summary><b>Em ASIC designs</b></summary>
+
 
 | Sigla | Nome | Descrição. |
 | ------- | ------ | -----------. |
@@ -336,3 +369,5 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 | _NDM_ | New Data Model | Banco de dados físico de entrada usado pelo IC Compiler II durante Place & Route. |
 
 ***
+
+</details>
