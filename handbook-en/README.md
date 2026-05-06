@@ -1,532 +1,367 @@
-## Mini Dictionary in Microeletronics (EN)
-=======
-# Microelectronics Glossary
->>>>>>> 99c3469 (version 0.1)
+## Mini-dictionary of Microelectronics (EN)
 
-Mini dictionary and technical glossary for Microelectronics, VLSI, ASIC Design, Verification and Physical Design.
+List of abbreviations, terms, and concepts used in hardware development and microelectronics research.
 
----
+**Index**
 
-# Languages
+1. [Semiconductor Fundamentals](#idCMOS)
+2. [VLSI](#idVLSI)
+3. [VDSM](#idVDSM)
+4. [Digital Design](#idDD)
+5. [ASICs](#idASIC)
 
-* [Português](#português)
-* [English](#english)
+***
 
----
-
-# Português
-
-## Índice
-
-* [A](#a-pt)
-* [B](#b-pt)
-* [C](#c-pt)
-* [D](#d-pt)
-* [E](#e-pt)
-* [F](#f-pt)
-* [G](#g-pt)
-* [H](#h-pt)
-* [I](#i-pt)
-* [J](#j-pt)
-* [K](#k-pt)
-* [L](#l-pt)
-* [M](#m-pt)
-* [N](#n-pt)
-* [O](#o-pt)
-* [P](#p-pt)
-* [Q](#q-pt)
-* [R](#r-pt)
-* [S](#s-pt)
-* [T](#t-pt)
-* [U](#u-pt)
-* [V](#v-pt)
-* [W](#w-pt)
-* [X](#x-pt)
-
----
-
-<a name="a-pt"></a>
+<a name="idCMOS"></a>
 
 <details markdown="1">
-<summary><b>A</b></summary>
 
-| Sigla/Termo | Nome completo | Descrição |
+<summary><b>Semiconductor Fundamentals (MOSFET)</b></summary>
+
+| Acronym/Term | Full Name | Description |
 | --- | --- | --- |
-| *ABV* | Assertion-Based Verification | Método de verificação que usa assertions para validar comportamentos e regras do projeto digital. |
-| *architecture* | architecture | É o que o programador vê, ou seja, o que o processador faz (ISA, registradores, tipo de dados). |
-| *ASCII* | American Standard Code for Information Interchange | Padrão de codificação de caracteres em valores numéricos. |
-| *ASIC* | Application-Specific Integrated Circuit | Circuito integrado projetado com finalidade específica. |
-| *Assertions* | Assertions | Verificações usadas para garantir que o circuito obedeça condições e comportamentos esperados durante a simulação. |
-| *ATPG* | Automatic Test Pattern Generation | Processo automático de geração de vetores de teste para detectar falhas no circuito. |
+|  | Band Gap | Energy difference between the valence band and the conduction band, defining the minimum energy required to free an electron (eV). |
+|  | Band Theory | A model used to explain the condition of solids and electron behavior. |
+|  | Polycrystalline | Atomic structure of silicon where silicon crystals are fused together. |
+|  | Layer | Different material levels stacked on the chip, each with a specific function in device construction and interconnections. |
+|  | Mask | Masks used in the lithography and doping process, containing patterns to be transferred to the wafer or another mask. |
+|  | Silicon Wafer | A slice of the ingot used as the base for IC manufacturing. |
+| _ICs_ | Integrated Circuits | Integrated circuits. |
+|  | Ingot | Cylindrical pure silicon ingots, raw material for semiconductors. |
+|  | Die | The useful area used by the chip on the Wafer. |
+|  | Scribe line | Non-functional spaces between dies, where cutting saws pass through. |
+| _TEG_ | Test Element Group | A pattern that reveals the real physical characteristics of a chip (C, L, R, Transistors...) for testing. |
+|  | Edge Dies | Dies at the wafer edges, which may be discarded due to expected fabrication failures. |
+|  | Flat Zone | Wafer edge that is cut to identify the wafer. |
+|  | Foundry | Factories that produce chips for third parties. They buy and integrate equipment from various manufacturers but do not design. Responsible for processes. Example: Samsung, TSMC. |
+| _Fabs_ | Fabrication Plants | Factories that produce chips for themselves, designing, manufacturing, and selling. IDM manufacturers. Example: Intel. |
+| _Fabless_ | Fabless Chip Companies | Companies that create their designs (may also use IPs) using EDA and manufacture their projects in foundries, potentially selling them or using them exclusively. Example: Apple, Qualcomm, AMD, Nvidia. |
+| _IDMs_ | Integrated Device Manufacturers | They design, manufacture, and sell their own chips. Example: Micron, Intel, Analog Devices. |
+| _WFE_ | Wafer Fab Equipment | Machines that manufacture chips. Examples: Applied Materials, KLA, LAM, Tokyo Electron, and ASML. |
+| _OSAT_ | Outsourced Semiconductor Assembly and Test | Factories that package and test chips from foundries. |
+| _DH_ | Design House | Companies specialized in some stage of VLSI, operating within Fabs or as Fabless. Basically, they design for other companies, not for themselves, acting as an outsourced service. |
+|  | Layout | The IC floorplan. |
+|  | Reticles | Tool containing a pattern image that needs to be repeated in steps to expose the entire wafer or mask. |
+|  | Mask Layer | Mask layers, generally represented by different colors. Example: Metal, poly, n+diff, Contact, etc. |
+|  | Mask Data | The final file describing all chip masks, usually in OASIS or GDSII format. |
+| _DRC_ | Design Rules Check | Manufacturing rules of the used technology that the Layout must obey, including cell checking, signoff, routing, structures, names, maps. |
+| _PUN_ | Pull-Up | PMOS transistors connected in parallel to VDD, located at the top to avoid short circuits in the CMOS connection. |
+| _PDN_ | Pull-Down | NMOS transistors connected in series to GROUND, located at the bottom to avoid short circuits in the CMOS connection. |
+| _MOSFETs_ | Metal-Oxide-Semiconductor Field-Effect Transistor | Transistor used for switching and amplification in integrated circuits. |
+| _CMOS_ | Complementary Metal-Oxide-Semiconductor | Technology that uses NMOS and PMOS for low power consumption. |
+| _PMOS_ | P-channel Metal-Oxide-Semiconductor | Transistor that conducts when the gate voltage is low. |
+| _NMOS_ | N-channel Metal-Oxide-Semiconductor | Transistor that conducts when the gate voltage is high. |
+|  | SPICE MODEL | Mathematical representation of a device's electrical behavior. |
+| _FinFET_ | Fin Field-Effect Transistor | 3D transistor with a fin-shaped channel, offering better electrostatic control and lower leakage. |
+| _FDSOI_ | Fully Depleted Silicon-On-Insulator | Transistor technology with a fully depleted channel over an insulator, reducing leakage and improving electrostatic control. |
+| _VDD_ | Voltage Drain Drain | "High-voltage" signal, connected to the power source. |
+| _VSS_ | Voltage Source Source | "Low-voltage" signal, connected to ground. |
+| _VTC_ | Voltage Transfer Characteristics | Curve showing the relationship between input and output voltage of a circuit (e.g., CMOS inverter). |
+| _Tphl_ | Propagation Delay Time High-to-Low | Time for the output to fall 1→0 after an input change. |
+| _Tplh_ | Propagation Delay Time Low-to-High | Time for the output to rise 0→1 after an input change. |
+| _TG_ | Transmission Gate | Bidirectional switch formed by NMOS and PMOS in parallel, used to pass signals without degradation. |
+|  | Fan-in | Number of inputs to a gate, affects resistance. Lower fan-in, lower delay. |
+|  | Fan-out | Number of outputs from a gate, affects capacitance. Higher fan-out, higher load and delay. |
+|  | Metastable | Data subject to metastability, may have an uncertain value, could be previous or current data. |
+| _NORA_ | NO-RAce Logic | Dynamic logic technique that avoids race conditions between stages. |
+| _OTP_ | One-time programmable | Memory programmable only once, used for permanent configuration. |
+| _SRAM_ | Static Random Access Memory | Fast memory based on flip-flops, no refresh needed. |
+| _DRAM_ | Dynamic Random Access Memory | Dense memory that stores data in capacitors and needs refresh. |
+| _RAM_ | Random Access Memory | Volatile, fast-access memory for reading and writing. |
+| _ROM_ | Read-Only Memory | Non-volatile memory used to store fixed data. |
+| _PROM_ | Programmable read-only memory | Type of ROM that can be programmed once by the user. |
+| _DFM_ | Design for Manufacturability | Rules and guidelines to be followed during the manufacturing stage. |
+| _CAD_ | Computer-Aided Design | Software for designing, drawing, and verifying systems for integrated circuit (IC) design. |
+| _PDK_ | Process Design Kit | Technology provided by the foundry consisting of a set of files characterized by it. |
+***
 
 </details>
 
----
-
-<a name="b-pt"></a>
+<a name="idVLSI"></a>
 
 <details markdown="1">
-<summary><b>B</b></summary>
 
-| Sigla/Termo | Nome completo | Descrição |
+<summary><b>VLSI</b></summary>
+
+| Acronym | Full Name | Description |
 | --- | --- | --- |
-| *Band Gap* | Band Gap | Diferença de energia entre a banda de valência e a banda de condução (eV). |
-| *Band Theory* | Band Theory | Modelo usado para explicar a condução em sólidos e o comportamento dos elétrons. |
-| *BBD* | Block Based Design | Metodologia de projetos orientada a blocos, usada em ASICs complexos e IPs. |
-| *BCD* | Binary-Coded Decimal | Codificação de decimal para 4 bits binários. |
-| *BDD* | Binary Decision Diagram | Estrutura gráfica usada para representar e manipular funções booleanas. |
-| *BEOL* | Back-End of Line | Etapa da fabricação responsável pelas interconexões metálicas entre os dispositivos do chip. |
-| *BF16* | bfloat16 | Formato reduzido muito usado em IA, mantendo expoente grande e mantissa menor. |
-| *BFM* | Bus Functional Model | Modelo usado em verificação para simular o comportamento funcional de interfaces e barramentos. |
-| *Big Endian* | Big Endian | Formato onde o byte mais significativo é armazenado primeiro na memória (ex: MIPS). |
-| *BILBO* | Built-In Logic Block Observer | Estrutura de teste usada para geração de padrões e análise de respostas em BIST. |
-| *BIST* | Built-In Self-Test | Técnica onde o próprio circuito realiza testes internos automaticamente. |
-| *Bit* | Binary Digit | Menor unidade de informação digital (0 ou 1). |
-| *BJT* | Bipolar Junction Transistor | Transistor que utiliza elétrons e lacunas para amplificar ou chavear sinais elétricos. |
-| *Block Diagram* | Block Diagram | Representação gráfica de um sistema usando blocos funcionais e suas conexões. |
-| *Budget* | Budget | Restrição de projeto que define o caminho de desenvolvimento (timing, power ou area). |
-| *BUS* | Barramento | Meio físico de conexão entre blocos, regido por um protocolo. |
-| *By-Pass Capacitor* | Bypass Capacitor | Capacitor usado para filtrar ruídos e estabilizar a alimentação elétrica do circuito. |
-| *Byte* | Byte | Conjunto de 8 bits usado para representar dados e caracteres digitais. |
+| _VLSI_ | Very Large-Scale Integration | The entire sequence of steps to transform an RTL description into fabrication. |
+| _EDA_ | Electronic Design Automation | The set of tools/software used throughout the IC development flow. |
+| _GTECH_ | Generic Technology | Standard library of generic EDA cells used in the intermediate synthesis stage. |
+| _NLDM_ | Non-Linear Delay Model | Older model (less accurate), non-linear model. |
+| _CCS_ | Composite Current Source | More accurate model than NLDM. |
+| _NLPM_ | Natural language programming linter | Library containing power modeling data. |
+| _STA_ | Static Timing Analysis | Technique to verify digital circuit timing (passed or not?), fast and exhaustive. |
+| _DTA_ | Dynamic Timing Analysis | Technique to analyze circuit timing using test vectors, specific tests, slower. |
+| _HDL_ | Hardware Description Language | Programming language paradigm for describing digital circuit behavior and hardware structures. |
+| _LVF_ | Liberty Variation Format | Extension of the Liberty format that models statistical variations (process, voltage, temperature) for more precise timing analysis. |
+| _TLF_ | Timing Library Format | File describing timing characteristics of standard cells. |
+| _LEF_ | Library Exchange Format | Describes simplified cell geometry for use in place & route. |
+| _DSCL_ | Digital Standard Cell Library | Set of digital standard cells (with logic, layout, and timing). |
+| _DEF_ | Design Exchange Format | Describes the physical implementation of the design (placement, routing, and connections). |
+| _LIB_ | Liberty Timing File | File (.lib) describing timing, power, and logic function of standard cells. |
+| _SDC_ | Synopsys Design Constraints | Standard file format, TCL-based developed by Synopsys, to define PPA constraints, used in the synthesis process. |
+| _FRAM_ | "Frame" | Similar to LEF, also describes the physical format of cells. |
+| _GDSII_ | Graphic Design System II | Standard file format used to represent physical layout (Current). |
+| _GDSI_ | Graphic Design System I | Standard file format used to represent physical layout (Old/obsolete). |
+| _OASIS_ | Open Artwork System Interchange Standard | Another format type (Open-source) to represent a physical design. |
+| _ASCII_ | American Standard Code for Information Interchange | Standard for encoding characters as numeric values. |
+| _SCL_ | Standard Cell | Characterized standard cells belonging to the PDK. |
+|  | CELL | Any type of "component" or unit of an IC project, can be a mux, transistor, etc. |
+|  | BUS | Physical connection medium between blocks, through which signals pass. It is governed by a protocol, the rules of that communication. |
+| _PI/PO_ | Pins | Circuit connection points, either input or output. |
+| _GRID_ | Grid | Reference mesh used in layout to align and position cells and interconnections. |
+| _LVS_ | Layout Versus Schematic | Checks if the physical layout matches the schematic (connectivity and devices). |
+| _ESD_ | Electrostatic Discharge | Static electricity discharge (like when you get a shock touching something), which can damage the chip and pins. |
+| _UPF_ | Unified Power Format | A format/standard to describe how power can be organized within an IC. |
+| _TCL_ | Tool Command Language | Scripting language used to automate and control EDA tools. |
+|  | CORE | The heart of the IC, or rather, the brain. Provides the basic functionality of an integrated circuit. |
+| _HBM_ | Human Body Model | A simulation using the human model when there is an electrical discharge into the circuit. Can be used on other occasions. |
+| _RTL_ | Register Transfer Level | An abstraction level for representing digital designs using HDL in the Design stage. |
+|  | SKEW | The data transition speed, the difference between the time the signal leaves and arrives. |
+| _DUTY CYCLE_ | Duty Cycle | Ratio between the high-level time and the total period of a periodic signal (usually in %). Input parameter for timing analysis and clock design. |
+| _CTS_ | Clock Tree Synthesis | Physical flow stage that creates and optimizes the clock signal distribution network on the chip. |
+| _PPA_ | Power, Performance, and Area | The main metrics we define for an IC project, based on the project specification. |
+| _IPs_ | Intellectual Property | Circuit blocks designed, verified, and reusable in projects, where a company owns their design. |
+|  | Floorplan | Involves routing vias to be used for power supply to standard cells. Locations, shapes, sizes of chip modules are determined, and chip area, delays, and wire congestion are estimated, thus providing the basis for the layout. |
+|  | Placement | Deals with the process of allocating Standard Cells in the proposed design. |
+|  | Site | A site is the basic positioning unit (grid) where standard cells can be placed in the layout. |
+| _FPGA_ | Field-Programmable Gate Array | Reconfigurable device composed of logic blocks and programmable interconnections. |
+| _PLD_ | Programmable Logic Device | Category of programmable digital devices used to implement logic. |
+| _MPGA_ | Mask Programmable Gate Array | Device programmed by mask during manufacturing, with interconnections defined at the foundry. |
+| _CPLD_ | Complex Programmable Logic Device | PLD with multiple logic blocks and predictable interconnections, good for control. |
+| _SPLD_ | Simple Programmable Logic Device | Simple PLD with few resources, used for basic logic. |
+|  | Budget | A project constraint, where we define our development path, whether timing, power, or area. |
+***
 
 </details>
 
----
-
-<a name="c-pt"></a>
+<a name="idVDSM"></a>
 
 <details markdown="1">
-<summary><b>C</b></summary>
 
-| Sigla/Termo | Nome completo | Descrição |
+<summary><b>VDSM</b></summary>
+
+| Acronym | Full Name | Description |
 | --- | --- | --- |
-| *CAD* | Computer-Aided Design | Software para projetar, desenhar e verificar sistemas para projeto de circuitos integrados. |
-| *Capactive Crosstalk* | Capacitive Crosstalk | Interferência entre dois sinais próximos causada pela capacitância parasita. |
-| *Capture path* | Capture Path | Caminho do clock usado no ponto final do caminho registrador para registrador. |
-| *CBS* | Cycle-Based Simulators | Simuladores que executam o circuito ciclo a ciclo, focando em desempenho. |
-| *CCS* | Composite Current Source | Modelo de timing mais acurado que o NLDM. |
-| *CDC* | Clock Domain Crossover | Cruzamento de domínio de clock; transferência de sinal entre diferentes domínios. |
-| *CELL* | Cell | Qualquer tipo de componente ou unidade de um projeto CI (ex: mux, transistor). |
-| *Cell Delay* | Cell Delay | Atraso do dado ao passar da entrada para a saída da célula. |
-| *Clock gating* | Clock Gating | Técnica para economizar energia desligando o clock em partes do circuito. |
-| *Clock gating path* | Clock Gating Path | Caminho do clock input port até o clock gating. |
-| *Clock group* | Clock Group | Grupo de caminhos diferentes de sinais de clock. |
-| *Clock jitter* | Clock Jitter | Variação do skew no tempo. |
-| *Clock latency* | Clock Latency | Diferença entre skew e slew. |
-| *Clock path* | Clock Path | Caminho do pino de clock até o pino de clock sequencial. |
-| *Clock slew* | Clock Slew | Diferença de tempo na chegada do clock em diferentes partes do circuito. |
-| *CMP* | Chemical Mechanical Planarization | Processo químico-mecânico que causa erosão/rebaixamento na fabricação. |
-| *CMOS* | Complementary Metal-Oxide-Semiconductor | Tecnologia que usa NMOS e PMOS para baixo consumo de energia. |
-| *Combinational Logic Circuits* | Combinational Logic Circuits | Circuitos lógicos cuja saída depende apenas das entradas atuais. |
-| *Constraints* | Constraints | Especificações definidas pelo budget do projeto (timing, power, etc.). |
-| *CORE* | Core | Coração do CI; fornece a funcionalidade básica. |
-| *Corners* | PVT Corners | Combinações específicas de Processo, Tensão e Temperatura para análise de extremos. |
-| *CPLD* | Complex Programmable Logic Device | PLD com múltiplos blocos lógicos e interconexões previsíveis. |
-| *Critical path* | Critical Path | Caminho mais lento do circuito; determina a frequência máxima. |
-| *CTS* | Clock Tree Synthesis | Etapa do fluxo físico que cria e otimiza a rede de distribuição do clock. |
-| *CU* | Control Unit | Unidade responsável por controlar e coordenar as operações do sistema digital. |
-| *Cut Edge* | Bridge Edge | Aresta cuja remoção desconecta partes do grafo. |
-| *Cut Vertex* | Articulation Point | Vértice cuja remoção aumenta o número de componentes conectados do grafo. |
+| _VDSM_ | Very deep submicron | A VLSI category for technologies below 0.25µm. |
+| _SoCs_ | System-on-Chip | Chip that integrates several components/cores/blocks into a single integrated circuit. |
+| _Hard Block_ | Hard Block | Physical block already ready inside the chip, optimized for high performance and lower energy consumption. |
+| _Soft Block_ | Soft Block | Block described in code (HDL), which can be configured and adapted according to the project. |
+| _TDD_ | Time Driven Design | Time-oriented design methodology, ensures the design and timing meet requirements. Used in ASICs. |
+| _BBD_ | Block based Design | Block-oriented design methodology. You can design blocks in isolation, aiding clock closure. Used in complex ASICs and IPs. |
+| _PBD_ | Platform based Design | Platform-oriented design methodology. A higher abstraction level, widely used in SoCs and Plug. |
+| _DVT_ | Design Validation Test | Project validation stage to verify if the circuit works correctly before manufacturing or final delivery. |
+| _DSM_ | Deep submicron | Refers to manufacturing technologies with dimensions well below 1 micrometer. |
+| _tp_ | Timing Path | A point-to-point path. |
+|  | Clock group | Group of different paths of/for clock signals. |
+|  | Slack | Difference between required time and arrival time (negative = violation). |
+|  | Net timing arcs | The real path delay, the sum of net and cell delays. |
+|  | Net delay | Total time required to charge or discharge all parasitic data of the net. |
+|  | Cell Delay | The delay for data to pass from cell input to output. |
+|  | Transparent latch | Memory circuit that lets the signal pass directly while the clock is active. |
+| _FF_ | flip-flop | Sequential circuit triggered by the clock edge that stores 1 bit of information, the smallest unit forming memory. |
+|  | Pulse width | Pulse width, time the data remains active and inactive. |
+| _tsu_ | Setup time | Time interval before the clock edge during which data must remain stable to avoid metastability. |
+| _thd_ | Hold time | Time interval after the clock edge during which data must remain stable to avoid metastability. |
+|  | Signal slew | Time required for a transition to occur. |
+|  | Pulse Width | Time between the active and inactive state of the clock. |
+|  | Clock latency | Difference between skew and slew. |
+| _HVT_ | High Threshold Voltage | Transistors with high threshold voltage, consume less energy but are slower. Located in Standard Cells. |
+| _RVT_ | Regular Threshold Voltage | Transistors with standard threshold voltage, balance performance and energy consumption. Located in Standard Cells. |
+|  | Clock slew | The time difference in clock arrival at different parts of a digital circuit. |
+|  | Clock jitter | Variation of skew over time. It varies the Skew. |
+|  | Recovery time | Minimum time the reset must be deactivated before the clock edge (Asynchronous). |
+|  | Removal time | Minimum time the asynchronous signal, usually reset, must remain active after the clock edge. |
+|  | Data path | The data path from the input port to FF, memory, latch, gate... |
+|  | Clock path | The path from the clock/memory pin to the sequential clock pin/memory/cell. |
+|  | Clock gating path | Clock input port -> Clock gating cell. |
+|  | Asynchronous path | Project input port to sequential cell set/reset. |
+|  | Critical path | The slowest path of the circuit, used to determine the maximum circuit frequency. |
+|  | False path | Existing but non-functional path. |
+|  | Single cycle path | Circuit path that takes less than one cycle. |
+|  | Multi Cycle path | Project timing path where the signal can take more than one cycle to propagate. |
+|  | Launch path | Clock path used at the start point of a register-to-register path. |
+|  | Capture path | Clock path used at the end point of a register-to-register path. |
+|  | Shortest path | The path with the smallest delay, the best case. |
+|  | Capacitive Crosstalk | Interference between two nearby signals, caused by parasitic capacitance between traces/wires in the circuit. |
+|  | Resistive Parasitics | Parasitic resistance related to power supply distribution. |
+|  | IR Drop | Voltage drop caused by trace resistance when electric current passes through the chip's power supply. |
+| _IR Noise_ | IR Noise | Undesired voltage variation or drop caused by the resistance of the chip's power supply network. |
+| _I/O_ | Input/Output | Interface responsible for input and output of signals between the chip and the external environment. |
+| _PDN_ | Power Distribution Network | Power distribution network responsible for delivering electrical supply to all parts of the chip. |
+| _P&R_ | Place and Route | Physical design stage that positions cells on the chip and makes connections between them. |
+| _DET_ | Double Edge Triggered | Technique where the flip-flop captures data on both clock edges (rising and falling). |
+| _GAL_ | Globally Asynchronous Logic | Architecture where different blocks operate asynchronously with each other. |
+| _By-Pass Capacitor_ | Bypass Capacitor | Capacitor used to filter noise and stabilize the circuit's electrical supply. |
+| _CDC_ | Clock Domain Crossing | Transfer of a signal between different clock domains in the circuit. |
+|  | Metastability | Signal instability in sequential circuits when data changes very close to the clock edge. |
+| _PVT_ | Process Voltage Temperature | Represents physical and operational variations affecting integrated circuit behavior, characterized in the PDK. Process (Fast/Slow), Voltage (VDD High/VDD Low), Temperature (High, Slow). |
+| _Corners_ | PVT Corners | Specific combinations of PVT (Process, Voltage, Temperature) used to analyze circuit behavior under extreme conditions (worst and best case). |
+| _OCV_ | On-Chip Variation | Variation of electrical characteristics within the chip itself caused by process, voltage, and temperature. |
+|  | Electromigration | Gradual displacement of metal atoms in a conductor due to high electron movement colliding with them, resulting in high current flow that can cause short or open circuits. |
+| _MTTF_ | Mean time to failure | The average time to failure, an indication of IC lifespan. |
+|  | Void | The electromigration effect reduces ion density at some interconnection points causing a void, leading to an open circuit. |
+|  | Hillock | Protrusion: Widening of the metallic interconnection between metal layers resulting in a short circuit. |
+| _NDR_ | Non-default rules | Proper sizing of nets with non-standard rules. |
+| _Nets_ | Nets | Electrical connections that interconnect cells and components within the digital circuit. |
+| _BJT_ | Bipolar Junction Transistor | Transistor that uses electrons and holes to amplify or switch electrical signals. |
+| _PNPN_ | PNPN Junction | Four-layer semiconductor structure used in switching devices, such as thyristors. |
+| _SOI_ | Silicon on Insulator | Manufacturing technology where the transistor is built over an insulating layer to reduce electrical losses. |
+| _FEOL_ | Front-End of Line | Manufacturing stage where transistors and active devices are built on the wafer. |
+| _BEOL_ | Back-End of Line | Manufacturing stage responsible for the metallic interconnections between chip devices. |
+| _DIBL_ | Drain Induced Barrier Lowering | Effect in transistors where the drain voltage lowers the channel barrier, increasing leakage. |
+| _GIBL_ | Gate Induced Barrier Lowering | Effect where the gate electric field lowers the transistor barrier, causing leakage current. |
+|  | antenna effect | A manufacturing problem in integrated circuits where electrical charges accumulated during the process (plasma) build up on metallic interconnections and can damage the transistor gate oxide. |
+| _CMP_ | Chemical mechanical planarization | Chemical-mechanical process that causes erosion/recess during manufacturing. |
+| _QoR_ | Quality of Results | Metric used to evaluate project quality in performance, area, power, and timing. |
+| _QoS_ | Quality of Silicon | Final quality of the manufactured chip considering performance, reliability, and consumption. |
+| _Tie_ | Tie cell | Standard cells used for logic constants (1/VDD or 0/GND). |
+| _TIEHI_ | Tie-high | Cells with fixed signal at 1/VDD. |
+| _TIELO_ | Tie-low | Cells with fixed signal at 0/GND. |
+***
 
 </details>
 
----
-
-<a name="d-pt"></a>
+<a name="idDD"></a>
 
 <details markdown="1">
-<summary><b>D</b></summary>
 
-| Sigla/Termo | Nome completo | Descrição |
+<summary><b>Digital Design Fundamentals</b></summary>
+
+| Acronym | Name | Description |
 | --- | --- | --- |
-| *DAG* | Directed Acyclic Graph | Grafo direcionado sem ciclos usado para representar dependências e decisões lógicas. |
-| *Data path* | Data Path | Caminho do dado da porta de entrada até FF, memória, latch, etc. |
-| *DB* | Database Library | Arquivo de entrada com bibliotecas de células padrão para síntese e implementação física. |
-| *DDC* | Design Compiler Database | Arquivo de entrada do Physical Design gerado na síntese lógica. |
-| *DEF* | Design Exchange Format | Descreve a implementação física do design (placement, roteamento e conexões). |
-| *DET* | Double Edge Triggered | Técnica onde o flip-flop captura dados nas duas bordas do clock. |
-| *DFM* | Design for Manufacturability | Regras e diretrizes para serem cumpridas na etapa de fabricação. |
-| *DFT* | Design for Testability | Técnica de design para testabilidade, incluindo inserção de scan chain. |
-| *DH* | Design House | Empresa especializada em etapas do VLSI que projeta para terceiros. |
-| *DIBL* | Drain Induced Barrier Lowering | Efeito onde a tensão do dreno reduz a barreira do canal, aumentando leakage. |
-| *Die* | Die | Área útil usada pelo chip no wafer. |
-| *DRAM* | Dynamic Random Access Memory | Memória densa que armazena dados em capacitores e precisa de refresh. |
-| *DRC* | Design Rule Check | Regras de fabricação que o layout deve obedecer. |
-| *DSCL* | Digital Standard Cell Library | Conjunto de células padrão digitais (lógica, layout e timing). |
-| *DSM* | Deep Submicron | Tecnologias de fabricação com dimensões bem menores que 1 micrômetro. |
-| *DSP* | Digital Signal Processing | Processamento digital de sinais para manipular áudio, vídeo e dados digitais. |
-| *DTA* | Dynamic Timing Analysis | Técnica para analisar timing utilizando vetores de teste (mais lenta). |
-| *DUT* | Device Under Test | Circuito ou sistema sendo testado e verificado durante simulação. |
-| *DUV* | Device Under Verification | Circuito sendo verificado durante o processo de validação funcional. |
-| *Duty Cycle* | Duty Cycle | Razão entre o tempo em nível alto e o período total de um sinal periódico (%). |
-| *DVE* | Discovery Visualization Environment | Ferramenta da Synopsys para depuração e análise de simulações RTL. |
-| *DVT* | Design Validation Test | Etapa de validação para verificar o funcionamento correto do circuito. |
+| _BCD_ | Binary-Coded Decimal | Decimal encoding into 4 binary bits. |
+| _MSB_ | Most Significant Bit | Most significant bit, located furthest left. |
+| _LSB_ | Least Significant Bit | Least significant bit, located furthest right. |
+| _Little Endian_ | Little Endian | Format where the least significant byte is stored first in memory. Example: RISC-V. |
+| _Big Endian_ | Big Endian | Format where the most significant byte is stored first in memory. Example: MIPS. |
+| _Sign and Magnitude_ | Sign and Magnitude | Binary representation where one bit indicates the sign and the remaining bits represent the magnitude. |
+| _One's Complement_ | One's Complement | Representation of negative numbers obtained by inverting all bits of the positive number. |
+| _Two's Complement_ | Two's Complement | Most widely used binary representation for negative numbers, inverting bits and adding 1. |
+| _Quantization_ | Quantization | Conversion of analog values into discrete digital levels. |
+| _Encoding_ | Encoding | Process of assigning a digital word to each quantized value. |
+| _FP_ | Floating Point | Numerical representation using sign, exponent, and mantissa to represent real numbers. |
+| _IEEE 754_ | IEEE 754 | Most widely used standard for floating-point number representation in digital hardware. |
+| _FP32_ | Single Precision | 32-bit format with 1 sign bit, 8 exponent bits, and 23 mantissa bits. |
+| _FP64_ | Double Precision | 64-bit format with higher precision and numerical range. |
+| _FP16_ | Half Precision | 16-bit format used to reduce area, memory, and consumption. |
+| _BF16_ | bfloat16 | Reduced format widely used in AI, keeping large exponent and smaller mantissa. |
+| _Gray_ | Gray Code | Binary encoding where only one bit changes between consecutive values. |
+| _K-Map_ | Karnaugh map | Graphical method used to simplify Boolean expressions and logic circuits. |
+| _SOM_ | Sum of Minterms | Canonical Boolean form where the function is represented by the sum of minterms. |
+| _POM_ | Product of Maxterms | Canonical Boolean form where the function is represented by the product of maxterms. |
+| _mi_ | Minterm | Product that includes all input variables. |
+| _Mi_ | Maxterm | Sum of all input variables. |
+| _SOP_ | Sum of Products | A function written as an OR of several ANDs. |
+| _POS_ | Product of Sums | A function written as an AND of several ORs. |
+| _Cut Vertex_ | Articulation Point | Vertex whose removal increases the number of connected components of the graph. |
+| _Cut Edge_ | Bridge Edge | Edge whose removal disconnects parts of the graph. |
+| _BDD_ | Binary Decision Diagram | Graphical structure used to represent and manipulate Boolean functions. |
+| _OBDD_ | Ordered Binary Decision Diagram | BDD where variables follow a fixed order on all paths. |
+| _DAG_ | Directed Acyclic Graph | Directed graph without cycles used to represent dependencies and logical decisions. |
+| _ROBDD_ | Reduced Ordered Binary Decision Diagram | OBDD optimized by removing redundant nodes and equivalent subtrees. |
+| _Quine-McCluskey Approach_ | Quine-McCluskey Method | Tabular method used to simplify Boolean expressions. |
+| _LE_ | Logical Effort | Method used to estimate delay and optimize speed in logic gates. |
+| _Block Diagram_ | Block Diagram | Graphical representation of a system using functional blocks and their connections. |
+| _Bit_ | Binary Digit | Smallest unit of digital information, can be 0 or 1. |
+| _Byte_ | Byte | Set of 8 bits used to represent digital data and characters. |
+| _X'_ | Don't Care | Condition where the logic value can be 0 or 1 without affecting circuit operation. |
+| _Hi-Z_ | High Impedance | State where the circuit output is electrically disconnected from the line. |
+| _State_ | State | Set of information stored at a given instant that defines the future behavior of the system. |
+| _Stage_ | Stage | Step or processing level within a digital circuit or pipeline. |
+| _Storage_ | Storage | Capacity or mechanism used to store digital data and information. |
+| _Sequential Logic Circuits_ | Sequential Logic Circuits | Logic circuits whose output depends on current inputs and the previous state. |
+| _Combinational Logic Circuits_ | Combinational Logic Circuits | Logic circuits whose output depends only on current inputs. |
+|  | edge | The edge, the signal transition period (transient). |
+|  | edge triggered | Sensitive to the edge. |
+| _FSM_ | Finite State Machine | Sequential logic model based on states and transitions. |
+| _Mealy Model_ | Mealy Machine | State machine where the output depends on the current state and inputs. |
+| _Moore Model_ | Moore Machine | State machine where the output depends only on the current state. |
+| _CU_ | Control Unit | Unit responsible for controlling and coordinating digital system operations. |
+| _PU_ | Processing Unit | Unit responsible for processing and executing data operations. |
+|  | Clock gating | Technique used in digital circuits to save power by turning off the clock signal to parts of the circuit. |
+| _ICG_ | Integrated Clock Gating | A standard cell used in microelectronics to implement clock gating safely and without glitches. |
+| _Minimum Clock_ | Minimum Clock Period | Smallest clock period allowed for the circuit to operate correctly without timing violations. |
+| _Maximum Clock_ | Maximum Clock Frequency | Highest clock frequency supported by the circuit without timing errors. |
+| _tpcq_ | Propagation delay (clock to Q) | Time after the clock edge during which the FF output is guaranteed stable. |
+| _ta_ | Aperture time | Time around the clock edge during which data must remain stable. Tsetup + Thold. |
+| _tccq_ | Contamination Delay | Time after the clock edge during which the FF output may be unstable. |
+| _Path Delay_ | Path Delay | Total time taken by a signal to travel through a circuit path. |
+***
 
 </details>
 
----
-
-<a name="e-pt"></a>
+<a name="idASIC"></a>
 
 <details markdown="1">
-<summary><b>E</b></summary>
 
-| Sigla/Termo | Nome completo | Descrição |
+<summary><b>ASIC Designs</b></summary>
+
+| Acronym | Name | Description |
 | --- | --- | --- |
-| *EBS* | Event-Based Simulators | Simuladores que processam mudanças de sinais e eventos ao longo do tempo. |
-| *EDA* | Electronic Design Automation | Conjunto de ferramentas/software utilizadas no fluxo de desenvolvimento do CI. |
-| *Edge Dies* | Edge Dies | Dies das bordas do wafer, possivelmente descartados por falhas esperadas. |
-| *edge* | Edge | Borda, período de transição do sinal (transitório). |
-| *edge triggered* | Edge Triggered | Sensível à borda. |
-| *Electromigration* | Electromigration | Deslocamento gradual de átomos de metal devido à alta corrente elétrica. |
-| *Encoding* | Encoding | Processo de atribuir uma palavra digital para cada valor quantizado. |
-| *ERC* | Electrical Rule Check | Verificação elétrica para detectar violações elétricas no layout. |
-| *ESD* | Electrostatic Discharge | Descarga de eletricidade estática que pode danificar o chip. |
-| *Event* | Event | Ação no tempo zero; mudança instantânea em determinado ponto. |
+| _ASIC_ | Application-Specific Integrated Circuit | IC designed for a specific purpose. |
+| _Package_ | IC Package | Physical chip encapsulation responsible for protecting the die and connecting the circuit to the external environment. |
+|  | Pads | Chip edges used to connect input/output signals, VDD/GND, communications, etc. |
+|  | Netlist | The product of the transformation performed by an EDA tool from an RTL, using project constraints and the provided technology (GTECH/PDK). |
+|  | Gate level | Digital representation level where the circuit is described using logic gates and their connections. |
+| _VHSIC_ | Very High-Speed Integrated Circuit | Integrated circuit developed to operate at high speed. |
+| _VHDL_ | VHSIC Hardware Description Language | Hardware description language used to model and design digital circuits. |
+|  | ports | The interface of a module. |
+|  | architecture | What the programmer sees, i.e., what the processor does. ISA, registers, data types... |
+| _ISA_ | Instruction Set Architecture | Set of instructions implemented by a computer architecture. |
+|  | microarchitecture | How the architecture is implemented, i.e., how the processor does it. Pipeline, ALU, Control unit... |
+| _DUT_ | Device Under Test | Circuit or system being tested and verified during simulation or validation. |
+| _Stimulus_ | Stimulus | Set of signals or inputs applied to the circuit during testing and simulation. |
+| _Assertions_ | Assertions | Checks used to ensure the circuit obeys expected conditions and behaviors during simulation. |
+| _Semaphore_ | Semaphore | Synchronization mechanism used to control access to shared resources between processes. |
+| _Mailbox_ | Mailbox | Structure used for message exchange between processes, functioning as a FIFO queue. |
+|  | Event | An event is a zero-time action. That is, an instantaneous change occurring at a specific point. |
+|  | Constraints | Specifications defined by the project budget, may include timing, power, etc. |
+| _TBs_ | Testbenchs (wrappers) | Verification environment that encapsulates the design to apply tests, stimuli, and validate circuit functionality. |
+| _DUV_ | Device Under Verification | Circuit or system being verified during the functional validation process. |
+| _CBS_ | Cycle-Based Simulators | Simulators that execute the circuit cycle by cycle, focusing on performance for large designs. |
+| _EBS_ | Event-Based Simulators | Simulators that process signal changes and events over time in the circuit. |
+| _DSP_ | Digital Signal Processing | Digital signal processing used to manipulate audio, video, and digital data. |
+| _OVI_ | Open Verilog International | Organization responsible for the initial standardization of the Verilog language. |
+| _TVM_ | Test Vector Memory | Memory that stores test vectors, used alongside ATPG and BIST. |
+| _ICE_ | In-Circuit Emulator | A device that can emulate the system processor. Can execute code from memory or custom code. Generally integrated into the core. |
+| _LRM_ | Language Reference Manual | Official document defining rules, syntax, and behavior of a hardware language. |
+| _PLI_ | Programming Language Interface | Interface that allows integrating external programming languages with Verilog simulators. |
+| _VCD_ | Value Change Dump | File used to store signal changes during digital simulation. |
+| _ABV_ | Assertion-Based Verification | Verification method that uses assertions to validate behaviors and rules of the digital design. |
+| _FIFO_ | First In First Out | Data structure where the first element to enter is the first to exit. |
+| _OVL_ | Open Verification Library | Library of reusable assertions used for digital design verification. |
+| _VCs_ | Virtual Cores | Reusable IP blocks used in verification and integration of ASIC/SoC projects. |
+| _BFM_ | Bus Functional Model | Model used in verification to simulate the functional behavior of interfaces and buses. |
+| _GUI_ | Graphical User Interface | Graphical interface that allows visual interaction with software and digital systems. |
+| _DVE_ | Discovery Visualization Environment | Synopsys tool used for debugging and analyzing RTL simulations. |
+| _SDF_ | Standard Delay Format | Output data structure containing the actual circuit delay. |
+| _PDEF_ | Physical Definition File | Input/output file containing physical project information, such as dimensions, pins, and chip placement. |
+| _TLU_ | Table Lookup Plus File | Files used in physical analysis to model resistance and capacitance of chip interconnections. |
+| _DFT_ | Design for Test | Scan test is a design for testability technique, where scan FFs are inserted during synthesis to optimize synthesis, timing, and physically check the project. |
+| _PI_ | Primary Input | Primary signal input to a digital circuit. |
+| _PO_ | Primary Output | Primary signal output of a digital circuit. |
+| _IDD Test_ | IDD Test | Test that measures the electric current consumed by the circuit to detect manufacturing faults or defects. |
+|  | Scan Chain | Basically the insertion of a FF + MUX in the DFT process. |
+| _LSSD_ | Level-Sensitive Scan Design | DFT technique based on level-sensitive latches to improve circuit testability. |
+| _BIST_ | Built-In Self-Test | Technique where the circuit itself performs internal tests automatically. |
+| _LFSR_ | Linear Feedback Shift Register | Shift register with feedback used to generate pseudo-random patterns. |
+| _BILBO_ | Built-In Logic Block Observer | Test structure used for pattern generation and response analysis in BIST. |
+| _JTAG_ | Joint Test Action Group | Boundary scan standard used for testing and debugging chips and boards. |
+| _TAP_ | Test Access Port | Interface used by JTAG to access circuit test functions. |
+| _ATPG_ | Automatic Test Pattern Generation | Automatic process of generating test vectors to detect faults in the circuit. |
+| _ERC_ | Electrical Rule Check | Electrical verification performed during the physical verification stage to detect electrical violations in the layout. |
+| _Signoff_ | Signoff | Final verification and approval stage of the project before chip manufacturing. |
+| _LPE_ | Layout Parasitic Extraction | Stage of extracting electrical parasites from the layout after chip physical routing. |
+| _GDSOUT_ | GDSII Output | Final physical layout file format sent for manufacturing. |
+| _PDV_ | Physical Design Verification | Physical layout verification stage to validate rules, connectivity, and chip integrity before signoff. |
+| _DDC_ | Design Compiler Database | Physical Design input file generated during logic synthesis by the Design Compiler. |
+| _DB_ | Database Library | Input file containing standard cell libraries used during synthesis and physical implementation. |
+| _.map_ | TLU+ Mapping File | Input file used in the physical stage to map technology layers to TLU+ parasitic models. |
+| _TF_ | Technology File | Physical Design stage input file containing manufacturing technology rules and information. |
+| _SPEF_ | Standard Parasitic Exchange Format | Physical Design output file containing extracted resistance and capacitance parasites. |
+| _NDM_ | New Data Model | Physical database input used by IC Compiler II during Place & Route. |
+***
 
 </details>
-
----
-
-<a name="f-pt"></a>
-
-<details markdown="1">
-<summary><b>F</b></summary>
-
-| Sigla/Termo | Nome completo | Descrição |
-| --- | --- | --- |
-| *Fabless* | Fabless Chip Companies | Empresas que criam projetos usando EDA e fabricam em foundries (ex: Apple, AMD, Nvidia). |
-| *Fabs* | Fabrication Plants | Fábricas que projetam, fabricam e vendem chips (IDMs) (ex: Intel). |
-| *False path* | False Path | Caminho existente, mas não funcional. |
-| *Fan-in* | Fan-in | Número de entradas de uma porta; afeta a resistência. |
-| *Fan-out* | Fan-out | Número de saídas de uma porta; afeta a capacitância. |
-| *FDSOI* | Fully Depleted Silicon-On-Insulator | Tecnologia com canal totalmente depletado sobre isolante, reduzindo leakage. |
-| *FEOL* | Front-End of Line | Etapa de fabricação onde transistores e dispositivos ativos são construídos. |
-| *FF* | Flip-Flop | Circuito sequencial acionado pela borda do clock que armazena 1 bit. |
-| *FIFO* | First In First Out | Estrutura de dados onde o primeiro elemento a entrar é o primeiro a sair. |
-| *FinFET* | Fin Field-Effect Transistor | Transistor 3D com canal em forma de "fin", melhor controle eletrostático. |
-| *Flat Zone* | Flat Zone | Borda do wafer cortada para identificação. |
-| *Floorplan* | Floorplan | Roteamento de vias para alimentação; define localização e tamanho dos módulos. |
-| *Foundry* | Foundry | Fábricas que produzem chips para terceiros (ex: Samsung, TSMC). |
-| *FP* | Floating Point | Representação numérica com sinal, expoente e mantissa para números reais. |
-| *FP16* | Half Precision | Formato de 16 bits (1 sinal, 5 expoente, 10 mantissa - IEEE 754). |
-| *FP32* | Single Precision | Formato de 32 bits (1 sinal, 8 expoente, 23 mantissa). |
-| *FP64* | Double Precision | Formato de 64 bits com maior precisão e alcance numérico. |
-| *FPGA* | Field-Programmable Gate Array | Dispositivo reconfigurável com blocos lógicos e interconexões programáveis. |
-| *FRAM* | Frame | Similar ao LEF; descreve o formato físico das células. |
-| *FSM* | Finite State Machine | Modelo lógico sequencial baseado em estados e transições. |
-
-</details>
-
----
-
-<a name="g-pt"></a>
-
-<details markdown="1">
-<summary><b>G</b></summary>
-
-| Sigla/Termo | Nome completo | Descrição |
-| --- | --- | --- |
-| *GAL* | Globally Asynchronous Logic | Arquitetura onde blocos diferentes funcionam de forma assíncrona entre si. |
-| *Gate level* | Gate Level | Nível de representação digital usando portas lógicas e conexões. |
-| *GDSI* | Graphic Design System I | Formato antigo/obsoleto para representar layout físico. |
-| *GDSII* | Graphic Design System II | Formato padrão atual para representar layout físico. |
-| *GDSOUT* | GDSII Output | Formato final do layout físico enviado para fabricação. |
-| *GIBL* | Gate Induced Barrier Lowering | Efeito onde o campo elétrico da porta reduz a barreira, causando fuga. |
-| *Gray* | Gray Code | Codificação binária onde apenas um bit muda entre valores consecutivos. |
-| *GRID* | Grid | Malha de referência usada no layout para alinhar e posicionar células. |
-| *GTECH* | Generic Technology | Biblioteca padrão de células genéricas da EDA para síntese intermediária. |
-| *GUI* | Graphical User Interface | Interface gráfica para interação visual com softwares e sistemas digitais. |
-
-</details>
-
----
-
-<a name="h-pt"></a>
-
-<details markdown="1">
-<summary><b>H</b></summary>
-
-| Sigla/Termo | Nome completo | Descrição |
-| --- | --- | --- |
-| *Hard Block* | Hard Block | Bloco físico já pronto, otimizado para alta performance e baixo consumo. |
-| *HBM* | Human Body Model | Simulação de descarga elétrica usando o modelo humano. |
-| *HDL* | Hardware Description Language | Linguagem para descrever comportamento de circuitos digitais. |
-| *Hi-Z* | High Impedance | Estado onde a saída do circuito fica eletricamente desconectada. |
-| *Hillock* | Hillock | Protuberância: aumento da largura da interconexão metálica causando curto. |
-| *HVT* | High Threshold Voltage | Transistores com tensão de limiar alta (menos energia, mais lentos). |
-
-</details>
-
----
-
-<a name="i-pt"></a>
-
-<details markdown="1">
-<summary><b>I</b></summary>
-
-| Sigla/Termo | Nome completo | Descrição |
-| --- | --- | --- |
-| *I/O* | Input/Output | Interface responsável pela entrada e saída de sinais do chip. |
-| *ICE* | In-Circuit Emulator | Dispositivo que emula o processador do sistema, integrado ao núcleo. |
-| *ICG* | Integrated Clock Gating | Célula padrão para implementar clock gating sem glitches. |
-| *ICs* | Integrated Circuits | Circuitos integrados. |
-| *IDD Test* | IDD Test | Teste que mede a corrente elétrica consumida para detectar falhas. |
-| *IDMs* | Integrated Device Manufacturers | Empresas que projetam, fabricam e vendem seus chips (ex: Micron, Intel). |
-| *IEEE 754* | IEEE 754 | Padrão mais usado para representação de números em ponto flutuante. |
-| *Ingot* | Ingot | Lingotes cilíndricos de silício puro, matéria-prima para semicondutores. |
-| *IPs* | Intellectual Property | Blocos de circuitos projetados, verificados e reutilizáveis. |
-| *IR Drop* | IR Drop | Queda de tensão causada pela resistência das trilhas de alimentação. |
-| *IR Noise* | IR Noise | Variação ou queda indesejada de tensão na rede de alimentação. |
-| *ISA* | Instruction Set Architecture | Conjunto de instruções implementadas por uma arquitetura computacional. |
-
-</details>
-
----
-
-<a name="j-pt"></a>
-
-<details markdown="1">
-<summary><b>J</b></summary>
-
-| Sigla/Termo | Nome completo | Descrição |
-| --- | --- | --- |
-| *JTAG* | Joint Test Action Group | Padrão de boundary scan para teste e depuração de chips e placas. |
-
-</details>
-
----
-
-<a name="k-pt"></a>
-
-<details markdown="1">
-<summary><b>K</b></summary>
-
-| Sigla/Termo | Nome completo | Descrição |
-| --- | --- | --- |
-| *K-Map* | Karnaugh Map | Método gráfico usado para simplificar expressões booleanas e circuitos lógicos. |
-
-</details>
-
----
-
-<a name="l-pt"></a>
-
-<details markdown="1">
-<summary><b>L</b></summary>
-
-| Sigla/Termo | Nome completo | Descrição |
-| --- | --- | --- |
-| *Launch path* | Launch Path | Caminho do clock usado no ponto inicial do caminho registrador para registrador. |
-| *Layer* | Layer | Níveis de materiais empilhados no chip, cada um com função específica. |
-| *Layout* | Layout | Planta do circuito integrado. |
-| *LE* | Logical Effort | Método usado para estimar atraso e otimizar velocidade em portas lógicas. |
-| *LEF* | Library Exchange Format | Descreve geometria simplificada das células para place & route. |
-| *LFSR* | Linear Feedback Shift Register | Registrador com realimentação para gerar padrões pseudoaleatórios. |
-| *LIB* | Liberty Timing File | Arquivo (.lib) com timing, potência e função lógica das células padrão. |
-| *Little Endian* | Little Endian | Formato onde o byte menos significativo é armazenado primeiro (ex: RISC-V). |
-| *LPE* | Layout Parasitic Extraction | Extração de parasitas elétricos do layout após roteamento. |
-| *LRM* | Language Reference Manual | Documento oficial que define regras, sintaxe e comportamento de uma linguagem. |
-| *LSB* | Least Significant Bit | Bit menos significativo, localizado mais à direita. |
-| *LSSD* | Level-Sensitive Scan Design | Técnica de DFT baseada em latches sensíveis a nível. |
-| *LVF* | Liberty Variation Format | Extensão do Liberty para modelar variações estatísticas (PVT). |
-| *LVS* | Layout Versus Schematic | Verifica se o layout físico corresponde ao esquemático. |
-
-</details>
-
----
-
-<a name="m-pt"></a>
-
-<details markdown="1">
-<summary><b>M</b></summary>
-
-| Sigla/Termo | Nome completo | Descrição |
-| --- | --- | --- |
-| *Mailbox* | Mailbox | Estrutura para troca de mensagens entre processos (fila FIFO). |
-| *Mask* | Mask | Máscaras usadas no processo de litografia e dopagem. |
-| *Mask Data* | Mask Data | Arquivo final que descreve todas as máscaras do chip (OASIS ou GDSII). |
-| *Mask Layer* | Mask Layer | Camadas das máscaras, representadas por diferentes cores. |
-| *Maximum Clock* | Maximum Clock Frequency | Maior frequência de clock suportada sem erros de timing. |
-| *Mealy Model* | Mealy Machine | Máquina de estados onde a saída depende do estado atual e das entradas. |
-| *Metastability* | Metastability | Instabilidade do sinal quando o dado muda próximo à borda do clock. |
-| *Metastable* | Metastable | Dado com valor incerto, podendo ser o anterior ou atual. |
-| *mi* | Minterm | Produto que inclui todas as variáveis de entrada. |
-| *Mi* | Maxterm | Soma que inclui todas as variáveis de entrada. |
-| *microarchitecture* | microarchitecture | Como a arquitetura é implementada (pipeline, ALU, unidade de controle). |
-| *Minimum Clock* | Minimum Clock Period | Menor período de clock permitido sem violar timing. |
-| *Moore Model* | Moore Machine | Máquina de estados onde a saída depende apenas do estado atual. |
-| *MOSFETs* | Metal-Oxide-Semiconductor Field-Effect Transistor | Transistor usado para chaveamento e amplificação. |
-| *MPGA* | Mask Programmable Gate Array | Dispositivo programado por máscara na fabricação. |
-| *MSB* | Most Significant Bit | Bit mais significativo, localizado mais à esquerda. |
-| *MTTF* | Mean Time To Failure | Tempo médio para falha; indica a vida útil do CI. |
-| *Multi Cycle path* | Multi Cycle Path | Caminho onde o sinal pode levar mais de um ciclo de clock. |
-
-</details>
-
----
-
-<a name="n-pt"></a>
-
-<details markdown="1">
-<summary><b>N</b></summary>
-
-| Sigla/Termo | Nome completo | Descrição |
-| --- | --- | --- |
-| *NDM* | New Data Model | Banco de dados físico usado pelo IC Compiler II durante Place & Route. |
-| *NDR* | Non-Default Rules | Dimensionamento adequado dos nets com regras não padrão. |
-| *Net delay* | Net Delay | Tempo total para carregar ou descarregar os parasitas da rede. |
-| *Net timing arcs* | Net Timing Arcs | Atraso real do caminho (soma dos atrasos da rede e célula). |
-| *Netlist* | Netlist | Produto da transformação do RTL pela EDA usando constraints e tecnologia. |
-| *Nets* | Nets | Conexões elétricas que interligam células e componentes. |
-| *NLDM* | Non-Linear Delay Model | Modelo de timing não linear (menos acurado). |
-| *NLPM* | Natural Language Programming Linter | Biblioteca com modelagem de potência. |
-| *NMOS* | N-channel Metal-Oxide-Semiconductor | Transistor que conduz quando a tensão no gate é alta. |
-| *NORA* | NO-RAce Logic | Técnica de lógica dinâmica que evita condições de corrida. |
-
-</details>
-
----
-
-<a name="o-pt"></a>
-
-<details markdown="1">
-<summary><b>O</b></summary>
-
-| Sigla/Termo | Nome completo | Descrição |
-| --- | --- | --- |
-| *OASIS* | Open Artwork System Interchange Standard | Formato open-source para representar design físico. |
-| *OBDD* | Ordered Binary Decision Diagram | BDD com ordem fixa de variáveis em todos os caminhos. |
-| *OCV* | On-Chip Variation | Variação das características elétricas dentro do chip (processo, tensão, temperatura). |
-| *One's Complement* | One's Complement | Representação de números negativos invertendo todos os bits. |
-| *OSAT* | Outsourced Semiconductor Assembly and Test | Fábricas que encapsulam e testam chips das foundries. |
-| *OTP* | One-Time Programmable | Memória programável apenas uma vez. |
-| *OVI* | Open Verilog International | Organização responsável pela padronização inicial do Verilog. |
-| *OVL* | Open Verification Library | Biblioteca de assertions reutilizáveis para verificação. |
-
-</details>
-
----
-
-<a name="p-pt"></a>
-
-<details markdown="1">
-<summary><b>P</b></summary>
-
-| Sigla/Termo | Nome completo | Descrição |
-| --- | --- | --- |
-| *P&R* | Place and Route | Etapa que posiciona as células e realiza as conexões entre elas. |
-| *Package* | IC Package | Encapsulamento físico do chip para proteger o die e conectar ao externo. |
-| *Pads* | Pads | Bordas do chip para conectar sinais I/O, VDD/GND, etc. |
-| *Path Delay* | Path Delay | Tempo total gasto por um sinal ao percorrer um caminho. |
-| *PBD* | Platform Based Design | Metodologia orientada a plataforma (alto nível de abstração). |
-| *PDEF* | Physical Definition File | Arquivo com informações físicas do projeto (dimensões, pinos, posicionamento). |
-| *PDK* | Process Design Kit | Conjunto de arquivos caracterizados fornecidos pela foundry. |
-| *PDN* | Power Distribution Network | Rede de distribuição de energia do chip. |
-| *PDV* | Physical Design Verification | Verificação física do layout antes do signoff. |
-| *PI* | Primary Input | Entrada principal de sinais em um circuito digital. |
-| *PI/PO* | Pins | Pontos de conexão do circuito (entrada ou saída). |
-| *Placement* | Placement | Processo de alocar as Standard Cells no design proposto. |
-| *PLD* | Programmable Logic Device | Categoria de dispositivos digitais programáveis. |
-| *PLI* | Programming Language Interface | Interface para integrar linguagens externas com simuladores Verilog. |
-| *PMOS* | P-channel Metal-Oxide-Semiconductor | Transistor que conduz quando a tensão no gate é baixa. |
-| *PNPN* | PNPN Junction | Estrutura de quatro camadas usada em tiristores. |
-| *PO* | Primary Output | Saída principal de sinais de um circuito digital. |
-| *Polycrystalline* | Polycrystalline | Estrutura atômica do silício onde os cristais são fundidos. |
-| *POM* | Product of Maxterms | Forma canônica booleana representada pelo produto de maxtermos. |
-| *ports* | Ports | Interface de um módulo. |
-| *POS* | Product of Sums | Função escrita como AND de várias ORs. |
-| *PPA* | Power, Performance, and Area | Principais métricas para definição de um projeto de CI. |
-| *PROM* | Programmable Read-Only Memory | ROM que pode ser programada uma única vez pelo usuário. |
-| *PU* | Processing Unit | Unidade responsável pelo processamento e execução de operações. |
-| *Pulse Width* | Pulse Width | Tempo entre o estado ativo e inativo do clock. |
-| *PUN* | Pull-Up | PMOS em paralelo ligado ao VDD (parte superior do CMOS). |
-| *PVT* | Process Voltage Temperature | Variações que afetam o comportamento do CI (caracterizado no PDK). |
-
-</details>
-
----
-
-<a name="q-pt"></a>
-
-<details markdown="1">
-<summary><b>Q</b></summary>
-
-| Sigla/Termo | Nome completo | Descrição |
-| --- | --- | --- |
-| *QoR* | Quality of Results | Métrica para avaliar qualidade do projeto (desempenho, área, potência, timing). |
-| *QoS* | Quality of Silicon | Qualidade final do chip fabricado (desempenho, confiabilidade, consumo). |
-| *Quantization* | Quantization | Conversão de valores analógicos em níveis discretos digitais. |
-| *Quine-McCluskey Approach* | Quine-McCluskey Method | Método tabular para simplificar expressões booleanas. |
-
-</details>
-
----
-
-<a name="r-pt"></a>
-
-<details markdown="1">
-<summary><b>R</b></summary>
-
-| Sigla/Termo | Nome completo | Descrição |
-| --- | --- | --- |
-| *RAM* | Random Access Memory | Memória volátil de acesso rápido para leitura e escrita. |
-| *Recovery time* | Recovery Time | Tempo mínimo para o reset estar desativado antes da borda do clock. |
-| *Removal time* | Removal Time | Tempo mínimo para o sinal assíncrono continuar ativo após a borda do clock. |
-| *Resistive Parasitics* | Resistive Parasitics | Resistência parasita relacionada à distribuição de alimentação. |
-| *Reticles* | Reticles | Ferramenta com imagem de padrão para expor o wafer ou mask. |
-| *ROBDD* | Reduced Ordered Binary Decision Diagram | OBDD otimizado (remoção de redundâncias). |
-| *ROM* | Read-Only Memory | Memória não volátil para armazenar dados fixos. |
-| *RTL* | Register Transfer Level | Nível de abstração para representar projetos digitais em HDL. |
-| *RVT* | Regular Threshold Voltage | Transistores com tensão de limiar padrão (equilíbrio). |
-
-</details>
-
----
-
-<a name="s-pt"></a>
-
-<details markdown="1">
-<summary><b>S</b></summary>
-
-| Sigla/Termo | Nome completo | Descrição |
-| --- | --- | --- |
-| *Scan Chain* | Scan Chain | Inserção de FF + MUX no processo de DFT. |
-| *SCL* | Standard Cell | Células padrão caracterizadas pertencentes ao PDK. |
-| *Scribe line* | Scribe Line | Espaços não funcionais entre dies para serra de corte. |
-| *SDC* | Synopsys Design Constraints | Arquivo padrão (TCL) para definir restrições de PPA. |
-| *SDF* | Standard Delay Format | Estrutura de dados com o atraso real do circuito. |
-| *Semaphore* | Semaphore | Mecanismo de sincronização para acesso a recursos compartilhados. |
-| *Sequential Logic Circuits* | Sequential Logic Circuits | Circuitos cuja saída depende das entradas atuais e do estado anterior. |
-| *Shortest path* | Shortest Path | Caminho de menor tempo (melhor caso). |
-| *Sign and Magnitude* | Sign and Magnitude | Representação binária com bit de sinal e bits de valor. |
-| *Signoff* | Signoff | Etapa final de verificação e aprovação antes da fabricação. |
-| *Signal slew* | Signal Slew | Tempo necessário para ocorrer uma transição. |
-| *Silicon Wafer* | Silicon Wafer | Fatia do lingote usada como base para fabricação de CI. |
-| *Single cycle path* | Single Cycle Path | Caminho que dura menos de um ciclo de clock. |
-| *Site* | Site | Unidade básica de posicionamento (grid) para standard cells. |
-| *SKEW* | Skew | Velocidade de transição do dado; diferença entre tempo de saída e chegada. |
-| *Slack* | Slack | Diferença entre tempo necessário e tempo de chegada (negativo = violação). |
-| *SoCs* | System-on-Chip | Chip que integra vários componentes em um único CI. |
-| *Soft Block* | Soft Block | Bloco descrito em HDL, configurável e adaptável. |
-| *SOI* | Silicon on Insulator | Tecnologia com transistor sobre camada isolante para reduzir perdas. |
-| *SOM* | Sum of Minterms | Forma canônica booleana representada pela soma de mintermos. |
-| *SOP* | Sum of Products | Função escrita como OR de várias ANDs. |
-| *SPEF* | Standard Parasitic Exchange Format | Arquivo com parasitas extraídos (R e C). |
-| *SPICE MODEL* | SPICE Model | Representação matemática do comportamento elétrico de um dispositivo. |
-| *SPLD* | Simple Programmable Logic Device | PLD simples com poucos recursos para lógica básica. |
-| *SRAM* | Static Random Access Memory | Memória rápida baseada em flip-flops (não precisa de refresh). |
-| *STA* | Static Timing Analysis | Técnica para verificar timing do circuito digital. |
-| *Stage* | Stage | Etapa ou nível de processamento em um circuito ou pipeline. |
-| *State* | State | Conjunto de informações armazenadas que define o comportamento futuro. |
-| *Stimulus* | Stimulus | Conjunto de sinais ou entradas aplicados ao circuito em teste. |
-| *Storage* | Storage | Capacidade ou mecanismo para armazenar dados digitais. |
-
-</details>
-
----
-
-<a name="t-pt"></a>
-
-<details markdown="1">
-<summary><b>T</b></summary
