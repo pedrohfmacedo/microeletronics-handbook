@@ -1,6 +1,6 @@
-## Abbreviations in Microeletronics
+## Minidicionário de microeletrônica (PT-BR)
 
-Lista de abreviaturas utilizadas no meio da microeletrônica;
+Lista de abreviaturas, termos, conceitos utilizadas no meio de desenvolvimento de hardware e pesquisa em microeletrônica.
 
 **Índice**
 
