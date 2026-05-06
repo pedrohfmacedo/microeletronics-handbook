@@ -109,7 +109,7 @@ Lista de abreviaturas utilizados no meio da microeletrônica;
 |_RTL_| Register Transfer Level | É um nível de abstração da representação de projetos digitais utilizando HDL na etapa de Design |
 |_SKEW_|  | É a velocidade de transicação do dado, a diferença entre entre o tempo que o sinal sai e chega |
 |_DUTY CYCLE_| Duty Cycle | Razão entre o tempo em nível alto e o período total de um sinal periódico (geralmente em %) Parâmetro de entrada (input) para análise de timing e projeto de clock |
-|_CTS_| Clock Tree Synthesis |  |
+| _CTS_ | Clock Tree Synthesis | Etapa do fluxo físico que cria e otimiza a rede de distribuição do sinal de clock no chip. |
 |_PPA_| Power, Performance, and Area | São as principais métricas para definirmos em um projeto de CI, a partir da especificação do projeto.|
 |_IPs_| Intellectual Property | São blocos de circuitos projetados, verificados e reutilizeveis em projetos, no qual uma empresa é detentora do seu design. |
 |_Floorplan_|  | Consiste no roteamento de vias que serão utilizados para alimentação das standard cell. São determinadas as localizações, formas, tamanhos dos módulos do chip e são estimadas a área do chip, atrasos e congestionamentos de fios, dessa maneira fornecendo a base para o leiaute. |
@@ -136,7 +136,7 @@ Lista de abreviaturas utilizados no meio da microeletrônica;
 |_PBD_| Platform based Design | Metodologia de projetos orientados a plataforma. É um nível de abstração maior, muito usado em SoCs e Plug|
 |_DVT_| Design Validation Test | Etapa de validação do projeto para verificar se o circuito funciona corretamente antes da fabricação ou entrega final. |
 |_DSM_| Deep submicron | Refere-se a tecnologias de fabricação com dimensões bem menores que 1 micrômetro. |
-|_Timing Path_|  | É um caminho de ponto a ponto. |
+|_tp_| Timing Path | É um caminho de ponto a ponto. |
 |_Clock group_|  | Grupo de caminhos diferentes do/de sinal/sinais de clock. |
 |_Slack_|  | Diferença entre o tempo necessário e o tempo de checagem (quando negativo = deu ruim) |
 |_Net timing arcs_|  | É o atraso real do caminho, é a soma dos atrasos da rede e célula |
@@ -208,44 +208,63 @@ Lista de abreviaturas utilizados no meio da microeletrônica;
 ### Fundamentos de Designs Digitais <a name = "idDD"></a>
 | Sigla | Nome | Descrição |
 |-------|------|-----------|
-|_BCD_| Binary-Coded Decimal | Codificação de decimal para 4 bits binários |
-|_MSB_| Most Significant Bit |  |
-|_LSB_| Least Significant Bit |  |
-|_Gray_| Gray Codwe  | Codificação binária em que apenas um bit muda entre valores consectuvios |
-|_Karnaugh maps_|  |  |
+|_BCD_| Binary-Coded Decimal | Codificação de decimal para 4 bits binários. |
+| _MSB_ | Most Significant Bit | Bit mais significativo, localizado mais à esquerda. |
+| _LSB_ | Least Significant Bit | Bit mais significativo, localizado mais à direita. |
+| _Little Endian_ | Little Endian | Formato em que o byte menos significativo é armazenado primeiro na memória. Ex: Risc-V. |
+| _Big Endian_ | Big Endian | Formato em que o byte mais significativo é armazenado primeiro na memória. Ex: Mips. |
+| _Sign and Magnitude_ | Sign and Magnitude | Representação binária onde um bit indica o sinal e os demais representam o valor. |
+| _One's Complement_ | One's Complement | Representação de números negativos obtida invertendo todos os bits do número positivo. |
+| _Two's Complement_ | Two's Complement | Representação binária mais usada para números negativos, invertendo os bits e somando 1. |
+| _Quantization_ | Quantization | Conversão de valores analógicos em níveis discretos digitais. |
+| _Encoding_ | Encoding | Processo de atribuir uma palavra digital para cada valor quantizado. |
+| _FP_ | Floating Point | Representação numérica que usa sinal, expoente e mantissa para representar números reais. |
+| _IEEE 754_ | IEEE 754 | Padrão mais usado para representação de números em ponto flutuante em hardware digital. |
+| _FP32_ | Single Precision | Formato de 32 bits com 1 bit de sinal, 8 de expoente e 23 de mantissa. |
+| _FP64_ | Double Precision | Formato de 64 bits com maior precisão e alcance numérico. |
+| _FP16_ | Half Precision | Formato de 16 bits usado para reduzir área, memória e consumo. |
+| _BF16_ | bfloat16 | Formato reduzido muito usado em IA, mantendo expoente grande e menor mantissa. |
+|_Gray_| Gray Code  | Codificação binária em que apenas um bit muda entre valores consectuvios. |
+|_K-Map_| Karnaugh maps | Método gráfico usado para simplificar expressões booleanas e circuitos lógicos. |
 |_SOM_| Sum of Minterms | Forma canônica booleana onde a função é representada pela soma de mintermos. |
 |_POM_| Product of Maxterms | Forma canônica booleana onde a função é representada pelo produto de maxtermos. |
-|_Minterm_|  | Produto que inclui todas as variáveis de entradas |
-|_Maxterm_|  | Soma de todas as variáveis de entradas |
-|_SOP_| Sum of Products | Uma função escrita como uma OR de várias Ands |
-|_POS_| Product of Sum | Uma função escrita como uma ANDs de várias ORs |
-|_Cut Edge_|  |  |
-|_BDD_| Binary Decision Diagram |  |
-|_OBDD_| Ordered Binary Decision Diagram |  |
-|_DAG_| Directed acyclic graph |  |
-|_ROBDD_| Reduced Ordered Binary Decision Diagram |  |
-|_Quinte-McCluskey Approach_|  |  |
-|_lE_| Logical Effort |  |
-|_Block Diagram_|  |  |
-|_stage_|  |  |
-|_storage_|  |  |
-|_sequential logic circuits_|  |  |
-|_combinational logic circuits_|  |  |
+|_mi_| Minterm | Produto que inclui todas as variáveis de entradas. |
+|_Mi_| Maxterm | Soma de todas as variáveis de entradas. |
+|_SOP_| Sum of Products | Uma função escrita como uma OR de várias Ands. |
+|_POS_| Product of Sum | Uma função escrita como uma ANDs de várias ORs. |
+| _Cut Vertex_ | Articulation Point | Vértice cuja remoção aumenta o número de componentes conectados do grafo. |
+| _Cut Edge_ | Bridge Edge | Aresta cuja remoção desconecta partes do grafo. |
+| _BDD_ | Binary Decision Diagram | Estrutura gráfica usada para representar e manipular funções booleanas. |
+| _OBDD_ | Ordered Binary Decision Diagram | BDD em que as variáveis seguem uma ordem fixa em todos os caminhos. |
+| _DAG_ | Directed Acyclic Graph | Grafo direcionado sem ciclos usado para representar dependências e decisões lógicas. |
+| _ROBDD_ | Reduced Ordered Binary Decision Diagram | OBDD otimizado pela remoção de nós redundantes e subárvores equivalentes. |
+| _Quine-McCluskey Approach_ | Quine-McCluskey Method | Método tabular usado para simplificar expressões booleanas. |
+| _LE_ | Logical Effort | Método usado para estimar atraso e otimizar velocidade em portas lógicas. |
+| _Block Diagram_ | Block Diagram | Representação gráfica de um sistema usando blocos funcionais e suas conexões. |
+| _Bit_ | Binary Digit | Menor unidade de informação digital, podendo valer 0 ou 1. |
+| _Byte_ | Byte | Conjunto de 8 bits usado para representar dados e caracteres digitais. |
+| _X'_ | Don't Care | Condição em que o valor lógico pode ser 0 ou 1 sem afetar o funcionamento do circuito. |
+| _Hi-Z_ | High Impedance | Estado em que a saída do circuito fica eletricamente desconectada da linha. |
+| _State_ | State | Conjunto de informações armazenadas em um determinado instante que define o comportamento futuro do sistema. |
+| _Stage_ | Stage | Etapa ou nível de processamento dentro de um circuito ou pipeline digital. |
+| _Storage_ | Storage | Capacidade ou mecanismo usado para armazenar dados e informações digitais. |
+| _Sequential Logic Circuits_ | Sequential Logic Circuits | Circuitos lógicos cuja saída depende das entradas atuais e do estado anterior. |
+| _Combinational Logic Circuits_ | Combinational Logic Circuits | Circuitos lógicos cuja saída depende apenas das entradas atuais. |
 |_edge_|  | É a borda, que é o período de transicação do sinal. (Transitório) |
-|_edge triggerd_|  |  |
-|_FSM_| Finite State Machine |  |
-|_mealy MODEL_|  |  |
-|_moore MODEL_|  |  |
-|_minimum clock_|  |  |
-|_maximum clock_|  |  |
+|_edge triggerd_|  | Sensível a borda |
+| _FSM_ | Finite State Machine | Modelo lógico sequencial baseado em estados e transições. |
+| _Mealy Model_ | Mealy Machine | Máquina de estados em que a saída depende do estado atual e das entradas. |
+| _Moore Model_ | Moore Machine | Máquina de estados em que a saída depende apenas do estado atual. |
+| _CU_ | Control Unit | Unidade responsável por controlar e coordenar as operações do sistema digital. |
+| _PU_ | Processing Unit | Unidade responsável pelo processamento e execução das operações de dados. |
 |_Clock gating_|  | Técnica usada em circuitos digitais para economizar energia, desligando sinal de clock em partes do circuito. |
 |_ICG_| Integrated Clock Gating | É uma célula padrão (standard cell) usada em microeletrônica para implementar clock gating de forma segura e sem glitches. |
-|_CU_| Control Unit |  |
-|_PU_| Processing Unit |  |
-|_Propagation delay_|  |  |
-|_Aperture time_|  |  |
-|_Contamination_|  |  |
-|_Path delay_|  |  |
+| _Minimum Clock_ | Minimum Clock Period | Menor período de clock permitido para o circuito funcionar corretamente sem violar timing. |
+| _Maximum Clock_ | Maximum Clock Frequency | Maior frequência de clock suportada pelo circuito sem erros de timing. |
+|_tpcq_| Propagation delay | Tempo após a borda do clock durante o qual saidá do FF tem garantia de estabilidade. |
+|_ta_| Aperture time | Tempo em trono da borda do clock, durante o qual os dados devem se manter estável. Tsetup + Thold. |
+|_tccq_| Contamination Delay | Tempo após a borda do clock durante o qual a saída do FF pode está instável. |
+| _Path Delay_ | Path Delay | Tempo total gasto por um sinal ao percorrer um caminho do circuito. |
 
 ***
 
@@ -259,7 +278,7 @@ Lista de abreviaturas utilizados no meio da microeletrônica;
 |_Netlist_|  | É o produto da transformação feita por uma EDA de um RTL, utilizando as constraints do projeto e a tecnologia forneceida (gttech/pdk) |
 |_Gate level_|  |  |
 |_VHSIC_| Very High-speed integrated circuit |  |
-|_VHDL_| VHSIC Hardware Description Language) |  |
+|_VHDL_| VHSIC Hardware Description Language |  |
 |_ports_|  | É a interface de um módulo |
 |_architecture_|  | É o que o programador vê, ou seja o que o processador faz. ISA,registradores, tipo de dados.. |
 |_ISA_| Instruction Set Architecture | Conjunto de instruções implementadas por uma arquitetura computacional |
@@ -301,7 +320,7 @@ Lista de abreviaturas utilizados no meio da microeletrônica;
 |_ERC_| Electrical Rule Check |  |
 |_Signoff_|  |  |
 |_LPE_| Layout Parasitc Extraction |  |
-|_GDSOUT_| GDSII Output |  |
+| _GDSOUT_ | GDSII Output | Formato de arquivo final do layout físico do chip enviado para fabricação. |
 |_PDV_| Physical Design Verification |  |
 
 ***
