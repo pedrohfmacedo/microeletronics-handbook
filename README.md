@@ -304,23 +304,35 @@ Lista de abreviaturas utilizados no meio da microeletrônica;
 | _ABV_ | Assertion-Based Verification | Método de verificação que usa assertions para validar comportamentos e regras do projeto digital. |
 | _FIFO_ | First In First Out | Estrutura de dados em que o primeiro elemento a entrar é o primeiro a sair. |
 | _OVL_ | Open Verification Library | Biblioteca de assertions reutilizáveis usada para verificação de projetos digitais. |
-|_DVE_| Discovery Visualization Environment |  |
+| _VCs_ | Virtual Cores | Blocos reutilizáveis de IP usados em verificação e integração de projetos ASIC/SoC. |
+| _BFM_ | Bus Functional Model | Modelo usado em verificação para simular o comportamento funcional de interfaces e barramentos. |
+| _GUI_ | Graphical User Interface | Interface gráfica que permite interação visual com softwares e sistemas digitais. |
+|_DVE_| Discovery Visualization Environment | Ferramenta da Synopsys usada para depuração e análise das simulações do RTL. |
 |_SDF_| Standard Delay Format | Estrutura de dados de saída que contém o atraso real do circuito. |
-|_PDEF_| Physical Definition File |  |
-|_DFT_| Design for test |  |
-|_PI_| Primary input |  |
-|_PO_| Primary output |  |
-|_LSSD_| Level-Sensitive Scan Design||
-|_BIST_| Built-in Self-Test |  |
-|_LFSR_| Linear Feedback Shift Register |  |
-|_BILBO_| Built-In Logic Block Observer |  |
-|_JTAG_|Joint Test Action Group||
-|_TAP_| Test Access Port |  |
-|_ATPG_| Automatic Test Pattern Generation |  |
-|_ERC_| Electrical Rule Check |  |
-|_Signoff_|  |  |
-|_LPE_| Layout Parasitc Extraction |  |
+|_PDEF_| Physical Definition File | Arquivo de saída/entrada que possui informações físicas do projeto, como dimensões, pinos e posicionamento do chip. | 
+|_TLU_| Table Lookup Plus File| Arquivos usados em análise física para modelar resistência e capacitância das interconexões do chip. |
+|_DFT_| Design for test | Teste de varredeura é uma técnica de design para testabilidade, onde há inserção de FF de varredaruas durante a síntese, para otmizar síntese, timing e checkar fisicamente o projeto. |
+| _PI_ | Primary Input | Entrada principal de sinais em um circuito digital. |
+| _PO_ | Primary Output | Saída principal de sinais de um circuito digital. |
+| _IDD Test_ | IDD Test | Teste que mede a corrente elétrica consumida pelo circuito para detectar falhas de fabricação ou defeitos. |
+|_Scan Chain_|  | Basicamente a inserção de um FF + MUX no processo de DFT. |
+| _LSSD_ | Level-Sensitive Scan Design | Técnica de DFT baseada em latches sensíveis a nível para melhorar testabilidade do circuito. |
+| _BIST_ | Built-In Self-Test | Técnica em que o próprio circuito realiza testes internos automaticamente. |
+| _LFSR_ | Linear Feedback Shift Register | Registrador de deslocamento com realimentação usado para gerar padrões pseudoaleatórios. |
+| _BILBO_ | Built-In Logic Block Observer | Estrutura de teste usada para geração de padrões e análise de respostas em BIST. |
+| _JTAG_ | Joint Test Action Group | Padrão de boundary scan usado para teste e depuração de chips e placas. |
+| _TAP_ | Test Access Port | Interface usada pelo JTAG para acessar funções de teste do circuito. |
+| _ATPG_ | Automatic Test Pattern Generation | Processo automático de geração de vetores de teste para detectar falhas no circuito. |
+| _ERC_ | Electrical Rule Check | Verificação elétrica realizada na etapa de verificação física para detectar violações elétricas no layout. |
+| _Signoff_ | Signoff | Etapa final de verificação e aprovação do projeto antes da fabricação do chip. |
+| _LPE_ | Layout Parasitic Extraction | Etapa de extração dos parasitas elétricos do layout após o roteamento físico do chip. |
 | _GDSOUT_ | GDSII Output | Formato de arquivo final do layout físico do chip enviado para fabricação. |
-|_PDV_| Physical Design Verification |  |
+| _PDV_ | Physical Design Verification | Etapa de verificação física do layout para validar regras, conectividade e integridade do chip antes do signoff. |
+| _DDC_ | Design Compiler Database | Arquivo de entrada do Physical Design gerado na etapa de síntese lógica pelo Design Compiler. |
+| _DB_ | Database Library | Arquivo de entrada contendo bibliotecas de células padrão usadas durante síntese e implementação física. |
+| _.map_ | TLU+ Mapping File | Arquivo de entrada usado na etapa física para mapear camadas tecnológicas aos modelos parasitas TLU+. |
+| _TF_ | Technology File | Arquivo de entrada da etapa de Physical Design contendo regras e informações da tecnologia de fabricação. |
+| _SPEF_ | Standard Parasitic Exchange Format | Arquivo de saída do Physical Design contendo parasitas extraídos de resistência e capacitância. |
+| _NDM_ | New Data Model | Banco de dados físico de entrada usado pelo IC Compiler II durante Place & Route. |
 
 ***
