@@ -128,72 +128,77 @@ Lista de abreviaturas utilizados no meio da microeletrônica;
 | Sigla | Nome completo | Descrição |
 |------|--------------|----------|
 |_VDSM_| Very deep submicron | Uma categoria do VLSI de tecnologias abaixo de 0.25Um |
-|_SoCs_| System on a Chip/ System-on-Chip |  |
-|_Hard Block_|  |  |
-|_Soft Block_|  |  |
+| _SoCs_ | System-on-Chip | Chip que integra vários componentes/core/blocos em um único circuito integrado. |
+| _Hard Block_ | Hard Block | Bloco físico já pronto dentro do chip, otimizado para alta performance e menor consumo de energia. |
+| _Soft Block_ | Soft Block | Bloco descrito em código (HDL), que pode ser configurado e adaptado conforme o projeto. |
 |_TDD_| Time Driven Design | Metodologia de projeto orientado ao tempo, garante que o design e o timing atenda aos requisitos. Usandos em ASIC. |
 |_BBD_| Blocked based Design | Metodologia de projetos orientados a blocos. Você pode projetar os blocos isoladamentes e ajuda no fechamento do clock. Usado em ASIC complexos e IP|
 |_PBD_| Platform based Design | Metodologia de projetos orientados a plataforma. É um nível de abstração maior, muito usado em SoCs e Plug|
-|_DVT_| Design Validation Test |  |
+|_DVT_| Design Validation Test | Etapa de validação do projeto para verificar se o circuito funciona corretamente antes da fabricação ou entrega final. |
 |_DSM_| Deep submicron | Refere-se a tecnologias de fabricação com dimensões bem menores que 1 micrômetro. |
 |_Timing Path_|  | É um caminho de ponto a ponto. |
 |_Clock group_|  | Grupo de caminhos diferentes do/de sinal/sinais de clock. |
 |_Slack_|  | Diferença entre o tempo necessário e o tempo de checagem (quando negativo = deu ruim) |
-|_Net timing arcs_|  |  |
-|_Net delay_|  |  |
-|_Cell Delay_|  |  |
-|_Transparente latch_|  |  |
-|_flip-flop_|  |  |
-|_Pusle width_|  |  |
+|_Net timing arcs_|  | É o atraso real do caminho, é a soma dos atrasos da rede e célula |
+|_Net delay_|  | Tempo total necessário para carregar ou descarregar todos os dados parasitas da rede |
+|_Cell Delay_|  | É o atraso do dado passar da entrada para saída da célula |
+|_Transparente latch_|  | Circuito de memória que deixa o sinal passar diretamente enquanto o clock está ativo. |
+|_FF_| flip-flop | Circuito sequencial acionado pela borda do clock que armazena 1 bit de informação, menor unidade que forma a memória |
+|_Pusle width_|  | Largura do pulso, tempo que o dado se mantém ativo e inativo. |
 |_tsu_| Setup time | Intervalo de tempo antes da borda de clock no qual o dado deve-se manter estável para não ocorrer metaestabilidade | 
 |_thd_| Hold time | Intervalo de tempo depois da borda de clock no qual o dado deve-se manter estável para não ocorrer metaestabilidade |
 |_Signal slew_|  | Tempo necessário para ocorrer uma transação |
 |_Pulse Width_|  | Tempo entre o estado atibvo e inativo do clock |
 |_Clock latency_|  | Diferença entre a skew e slew |
-|_HVT_| High Threshold Voltage |  |
-|_RVT_| Regular Threshold Voltage |  |
+| _HVT_ | High Threshold Voltage | Transistores com tensão de limiar alta, consumem menos energia mas são mais lentos. Localizados nas Standard Cell |
+| _RVT_ | Regular Threshold Voltage | Transistores com tensão de limiar padrão, equilibram desempenho e consumo de energia. Localizados nas Standard Cell  |
 |_Clock slew_|  | É a diferença de tempo na chegada do clock em diferentes partes de um circuito digital. |
 |_Clock jitter_|  | É a variação do skew no tmepo. Ele varia o Skew |
 |_Recovery time_|  | Tempo mínimo em que o reset deve estar desativado antes da borda do clock. (Assíncrono) |
 |_Removal time_|  | Tempo mínimo que o sinal assíncrono, geralmente o reset, deve continuar ativo após a borda do clock |
-|_Data path_|  |  |
-|_Clock path_|  |  |
-|_Clock gating path_|  |  |
-|_Asynchronus path_|  |  |
+|_Data path_|  | É o caminho do dado da porta de entrada até ff, memória, latct, porta... |
+|_Clock path_|  | É o caminho do pino de clock/memória até o pino de clock sequencial/memória/célula |
+|_Clock gating path_|  | Clock input port -> Clock gating |
+|_Asynchronus path_|  | Porta de entrada do projeto até célula sequencial/set/reset |
 |_Critical path_|  | O caminho mais lento do circuito, usado para determinar a frequência máxima do circuito. |
-|_False path_|  |  |
-|_Single cycle path_|  |  |
-|_Multi Cycle path_|  |  |
-|_Launch path_|  |  |
-|_Capture path_|  |  |
-|_Shortest path_|  |  |
+|_False path_|  | Caminho existente, mas não funcional. | 
+|_Single cycle path_|  | Caminho do circuito que dura menos de um ciclo. |
+|_Multi Cycle path_|  | Caminho de temporização de projeto no qual o sinal pode levar mais de um ciclo. |
+|_Launch path_|  | Caminho do clock usado no ponto inicial do caminho do registrador para registrador. |
+|_Capture path_|  | Caminho do clock usado no ponto final do caminho do registrador para registrador. |
+|_Shortest path_|  | É o caminho de menor tempo, o melhor caso. |
 |_Capactive Crosstalk_|  | Interferência entre dois sinais próximos, causada pela capacitância parasita entre trilhas/fios no circuito. |
 |_Resistive Parasitcs_|  | Resistência parasita relacionado na distribuição da fonte de alimentação. |
-|_IR Drop_|  |  |
-|_I/O_| Input/Output |  |
-|_IR noise_|  |  |
-|_GAL_| Global Asynchronous logic |  |
-|_DET_| Double edge triggered |  |
-|_By pass_|  |  |
+|_IR Drop_|  | Queda de tensão causada pela resistência das trilhas quando a corrente elétrica passa pela alimentação do chip. |
+| _IR Noise_ | IR Noise | Variação ou queda indesejada de tensão causada pela resistência da rede de alimentação do chip. |
+| _I/O_ | Input/Output | Interface responsável pela entrada e saída de sinais entre o chip e o ambiente externo. |
+| _PDN_ | Power Distribution Network | Rede de distribuição de energia responsável por levar alimentação elétrica para todas as partes do chip. |
+| _P&R_ | Place and Route | Etapa do projeto físico que posiciona as células no chip e realiza as conexões entre elas. |
+| _DET_ | Double Edge Triggered | Técnica em que o flip-flop captura dados nas duas bordas do clock (subida e descida). |
+| _GAL_ | Globally Asynchronous Logic | Arquitetura onde diferentes blocos funcionam de forma assíncrona entre si. |
+| _By-Pass Capacitor_ | Bypass Capacitor | Capacitor usado para filtrar ruídos e estabilizar a alimentação elétrica do circuito. |
 |_CDC_| Clock Domain Crossover | Cruzamento do domínio de clock, é a transferência do sinall de clock em diferentes partes do circuito. |
 |_Metastability_|  | É a instabilidade do sinal em circuitos sequenciais quando o dado muda muito próximo da borda do clock |
 |_PVT_| Process Voltage Temperature | Representa as variações físicas e operacionais que afetam o comportamento de um circuito integrado, caracterizado no PDK. Process (Fast/Slow), Voltage (VDD High/ VDDlow), Temperature (High, Slow) |
 |_Corners_| Process Voltage Temperature | Corners são combinações específicas de PVT (Process, Voltage, Temperature) usadas para analisar o comportamento de um circuito nas condições extremas (pior e melhor caso). |
-|_OCV_| On-chip Variation |  |
-|_Electromigration_|  |  |
-|_MTTF_| Mean time to failure |  |
-|_Vold_|  |  |
-|_Hillock_|  |  |
-|_NDR_| Nondefault rules |  |
-|_BJT_| Bipolar Junction |  |
-|_PNPN_| Junction PNPN |  |
-|_SOI_| Silicon on insulator |  |
-|_FEOL_| Front-end line |  |
-|_BEOL_| Back-end of line |  |
+| _OCV_ | On-Chip Variation | Variação das características elétricas dentro do próprio chip causada por processo, tensão e temperatura. |
+|_Electromigration_|  | É o deslocamento gradual de átomos de metal de um condutor devido ao alto movimento dos elétrons que colidem com eles, resultando numa alta correteq eu flui pelo condugor podendo causar a conexão em curto ou em aberto. |
+|_MTTF_| Mean time to failure | É o tempo médio para falha, é a indicação da vida útil do CI.  |
+|_Vold_|  | O efeito da eletromigração reduz a densidade de íons em alguns pontos de interconexão causando um vazio, que leva ao circuito aberto. |
+|_Hillock_|  | Protuberância: Aumento da largura da interconexão metálica entre camadas de metal resultando em um curto circuito. |
+|_NDR_| Nondefault rules | É o dimensionamento adequado dos nets com regras que não são padrão. |
+| _Nets_ | Nets | Conexões elétricas que interligam células e componentes dentro do circuito digital. |
+| _BJT_ | Bipolar Junction Transistor | Transistor que utiliza elétrons e lacunas para amplificar ou chavear sinais elétricos. |
+| _PNPN_ | PNPN Junction | Estrutura semicondutora de quatro camadas usada em dispositivos de chaveamento, como tiristores. |
+| _SOI_ | Silicon on Insulator | Tecnologia de fabricação onde o transistor é construído sobre uma camada isolante para reduzir perdas elétricas. |
+| _FEOL_ | Front-End of Line | Etapa da fabricação onde os transistores e dispositivos ativos são construídos no wafer. |
+| _BEOL_ | Back-End of Line | Etapa da fabricação responsável pelas interconexões metálicas entre os dispositivos do chip. |
+| _DIBL_ | Drain Induced Barrier Lowering | Efeito em transistores onde a tensão do dreno reduz a barreira do canal, aumentando leakage. |
+| _GIBL_ | Gate Induced Barrier Lowering | Efeito em que o campo elétrico da porta reduz a barreira do transistor, causando corrente de fuga. |
 |_antenna effect_|  | é um problema de fabricação em circuitos integrados onde cargas elétricas acumuladas durante o processo (plasma) se acumulam em interconexões metálicas e podem danificar o óxido de gate dos transistores. |
-|_CMP_| Chemical mechanical planarization |  |
-|_Qor_| Quality of results |  |
-|_Qos_| Quality of Silicon |  |
+|_CMP_| Chemical mechanical planarization | Processo quimico-mecânico que causa a erosão/rebaixamento no processo de fabricação. |
+| _QoR_ | Quality of Results | Métrica usada para avaliar qualidade do projeto em desempenho, área, potência e timing. |
+| _QoS_ | Quality of Silicon | Qualidade final do chip fabricado considerando desempenho, confiabilidade e consumo. |
 |_Tie_| Tie cell | Células padrão usadas para constantes lógicas (1/VDD ou 0/GND) |
 |_TIEHI_| Tie-high | Células com sinal fixo em 1/VDD |
 |_TIELO_| Tie-low | Células com sinal fixo em 0/GND |
@@ -208,8 +213,8 @@ Lista de abreviaturas utilizados no meio da microeletrônica;
 |_LSB_| Least Significant Bit |  |
 |_Gray_| Gray Codwe  | Codificação binária em que apenas um bit muda entre valores consectuvios |
 |_Karnaugh maps_|  |  |
-|_SOM_| Product of maxterms |  |
-|_POM_| Sum of minterms |  |
+|_SOM_| Sum of Minterms | Forma canônica booleana onde a função é representada pela soma de mintermos. |
+|_POM_| Product of Maxterms | Forma canônica booleana onde a função é representada pelo produto de maxtermos. |
 |_Minterm_|  | Produto que inclui todas as variáveis de entradas |
 |_Maxterm_|  | Soma de todas as variáveis de entradas |
 |_SOP_| Sum of Products | Uma função escrita como uma OR de várias Ands |
