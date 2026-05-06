@@ -1,4 +1,4 @@
-## Mini Dictionary in Microeletronics
+## Mini Dictionary in Microeletronics (EN)
 
 List of abbreviations, terms and concept  used in microelectronics;
 
