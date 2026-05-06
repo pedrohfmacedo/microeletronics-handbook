@@ -1,4 +1,4 @@
-Preciso que você analise todo esse README.md. Os dados da tabela deve seguir o seguinte padrão | _sigla_ | nome | Descrição. | Organize. Corrija também o portugues nelas. ## Abbreviations in Microeletronics
+## Abbreviations in Microeletronics
 
 Lista de abreviaturas utilizadas no meio da microeletrônica;
 
