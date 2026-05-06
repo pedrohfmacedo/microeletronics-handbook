@@ -131,25 +131,9 @@ Future versions of this repository will include deeper and more advanced content
 * Verification architectures
 * Physical Verification
 * Advanced Timing Analysis
-* Low Power Design
 * RTL Design examples
-* TCL scripting
-* Synopsys/Cadence flows
 
 The main focus of future updates will be the Verification and UVM areas.
-
----
-
-# Goals
-
-This project aims to:
-
-* Help students learning Microelectronics and VLSI
-* Create organized technical documentation
-* Centralize semiconductor terminology
-* Provide a quick-reference technical guide
-* Support ASIC/VLSI learning
-* Build an open technical knowledge base
 
 ---
 
