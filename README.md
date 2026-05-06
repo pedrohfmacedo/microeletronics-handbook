@@ -15,30 +15,30 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 ### Em Fundamentos de semicondutores (MOSFET) <a name = "idCMOS"></a>
 | Sigla/Termo | Nome completo | Descrição. |
 | ------ | -------------- | ----------. |
-| _Band Gap_ | | Diferença de energia entre a banda de valência e o banda de condução, que define a quantidade mínima de energia necessária para liberar um elétron (eV). |
-| _Band Theory_ | | Um modelo usado para explicar a condição de sólidos e o comportamento dos elétrons. |
-| _Polycrystalline_ | | Estrutura atômica do silício onde os cristais de silícios são fundidos. |
-| _Layer_ | | São os níveis de materiais diferentes empilhados no chip, onde cada camada tem uma função específica na construção dos dispositivos e das interconexões. |
-| _Mask_ | | São as máscaras usadas no processo de litografia e dopagem dos semicondutores, que contém padrões a serem transferidos para o wafer ou outra máscara. |
-| _Silicon Wafer_ | | Uma fatia do lingote usado como base para fabricação dos CI. |
+|  | Band Gap | Diferença de energia entre a banda de valência e o banda de condução, que define a quantidade mínima de energia necessária para liberar um elétron (eV). |
+|  | Band Theory | Um modelo usado para explicar a condição de sólidos e o comportamento dos elétrons. |
+|  | Polycrystalline | Estrutura atômica do silício onde os cristais de silícios são fundidos. |
+|  | Layer | São os níveis de materiais diferentes empilhados no chip, onde cada camada tem uma função específica na construção dos dispositivos e das interconexões. |
+|  | Mask | São as máscaras usadas no processo de litografia e dopagem dos semicondutores, que contém padrões a serem transferidos para o wafer ou outra máscara. |
+|  | Silicon Wafer | Uma fatia do lingote usado como base para fabricação dos CI. |
 | _ICs_ | Integrated Circuits | Circuitos integrados. |
-| _Ingot_ | | São os lingotes de silícios cilíndricos puro, matéria prima para os semicondutores. |
-| _Die_ | | É a área útil usado pelo chip no Wafer. |
-| _Scribe line_ | | São os espaços não funcionais entre os dies, por onde passa as serras de corte. |
+|  | Ingot | São os lingotes de silícios cilíndricos puro, matéria prima para os semicondutores. |
+|  | Die | É a área útil usado pelo chip no Wafer. |
+|  | Scribe line | São os espaços não funcionais entre os dies, por onde passa as serras de corte. |
 | _TEG_ | Test Element Group | Um padrão que revela as características físicas reais de um chip (C,L,R,Transistores...) para serem testados. |
-| _Edge Dies_ | | São os dies das bordas do wafer, que podem ser descartados por falha esperada no processo de fabricação. |
-| _Flat Zone_ | | Borda do wafer que é cortada para identificar o wafer. |
-| _Foundry_ | | Fábricas que produzem chips para terceiros, para os terceiros. Compram e integram equipamentos de diversos fabricantes, mas não projetam. Responsável pelos processos. Exemplo: Samsung, TSMC. |
+|  | Edge Dies | São os dies das bordas do wafer, que podem ser descartados por falha esperada no processo de fabricação. |
+|  | Flat Zone | Borda do wafer que é cortada para identificar o wafer. |
+|  | Foundry | Fábricas que produzem chips para terceiros, para os terceiros. Compram e integram equipamentos de diversos fabricantes, mas não projetam. Responsável pelos processos. Exemplo: Samsung, TSMC. |
 | _Fabs_ | Fabrication Plants | Fábrica que produzem chips para si, projetam, fabricam e vendem. Fabricantes de IDMs. Exemplo: Intel. |
 | _Fabless_ | Fabless Chip Compaines | Empresas que criam seus projetos (também podem usar IPs) usando EDA e fabricam seus projetos em foundries, podendo vende-los ou ser de uso exclusivos. Exemplo: Apple, QUalcomm, AMD, Nvidia. |
 | _IDMs_ | Integrated Device Manufacturers | Eles mesmos projetam, fabricam e vendem seus chips. Exemplo: Micron, Intel, Analog Devices. |
 | _WFE_ | Wafer Fab Equipment | Máquinas que fabricam chips. Exemplos: Applied Materials, KLA, LAM, Tokyo Electron e ASML. |
 | _OSAT_ | Outsourced Semiconductor Assembly and Test | Fábricas que encapsulam e testam os chips das foundries. |
 | _DH_ | Design House | São empresas especializadas em alguma etapa do VLSI, que atuam nas Fabs ou Fabless. Basicamente, projetam para outras empresas e não para sí mesmo. Agindo como uma terceirizada. |
-| _Layout_ | | É a planta do CI. |
-| _Reticles_ | | Ferramenta que contém uam imagem de padrão que precisa ser repetida em etapas para expor todo o wafer ou mask. |
-| _Mask Layer_ | | São as camadas das máscaras, geralmente representado por diferentes cores. Exemplo: Metal, poly, n+diff, Contact.. etc. |
-| _Mask Data_ | | É o arquivo final que descrevem todas as máscaras do chip, geralmente em formato OASIS ou GDSII. |
+|  | Layout | É a planta do CI. |
+|  | Reticles | Ferramenta que contém uam imagem de padrão que precisa ser repetida em etapas para expor todo o wafer ou mask. |
+|  | Mask Layer | São as camadas das máscaras, geralmente representado por diferentes cores. Exemplo: Metal, poly, n+diff, Contact.. etc. |
+|  | Mask Data | É o arquivo final que descrevem todas as máscaras do chip, geralmente em formato OASIS ou GDSII. |
 | _DRC_ | Design Rules Check | São as regras de fabricação da tecnologia utilizada no qual o Layout deve obedecer. Sejam elas, checagem de células, signof, rout, struturas, names, maps.. |
 | _PUN_ | Pull-Up | "Puxar para cima". São PMOS conectados em paralelo ligado ao VDD, localizado na parte superior para evitar curto circuito na conexão CMOS. |
 | _PDN_ | Pull-Down | "Puxar para baixo". São NMOS conectados em série ligado ao GROUND, localizado na parte inferior para evitar curto circuito na conexão CMOS. |
@@ -46,7 +46,7 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 | _CMOS_ | Complementary Metal-Oxide-Semiconductor | Tecnologia que usa NMOS e PMOS para baixo consumo de energia. |
 | _PMOS_ | P-channel Metal-Oxide-Semiconductor | Transistor que conduz quando a tensão no gate é baixa. |
 | _NMOS_ | N-channel Metal-Oxide-Semiconductor | Transistor que conduz quando a tensão no gate é alta. |
-| _SPICE MODEL_ | | Representação matemáttica de um comportamennto elétrico de um dispositivo. |
+|  | SPICE MODEL | Representação matemáttica de um comportamennto elétrico de um dispositivo. |
 | _FinFET_ | Fin Field-Effect Transistor | Transistor 3D com canal em forma de “fin”, oferecendo melhor controle eletrostático e menor leakage. |
 | _FDSOI_ | Fully Depleted Silicon-On-Insulator | Tecnologia de transistores com canal totalmente depletado sobre isolante, reduzindo leakage e melhorando controle eletrostático. |
 | _VDD_ | Voltage Drain Drain | Sinal "high-voltage", ligado a fonte. |
@@ -55,9 +55,9 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 | _Tphl_ | Propagation Delay Time High-to-Low | Tempo para a saída cair de 1→0 após a mudança na entrada. |
 | _Tplh_ | Propagation Delay Time Low-to-High | Tempo para a saída subir de 0→1 após a mudança na entrada. |
 | _TG_ | Transmission Gate | Chave bidirecional formada por NMOS e PMOS em paralelo, usada para passar sinais sem degradação. |
-| _Fan-in_ | | São os números de entradas de uma porta, que afeta a resistência. Menor fan-in, menor o delay. |
-| _Fan-out_ | | São os números de saídas de uma porta, que afeta a capacitância. Maior fan-out, maior a carga e delay. |
-| _Metastable_ | | Dado passível de metaestabilidade, pode ter um valor incerto, podendo ser o dado anterior ou atual. |
+|  | Fan-in | São os números de entradas de uma porta, que afeta a resistência. Menor fan-in, menor o delay. |
+|  | Fan-out | São os números de saídas de uma porta, que afeta a capacitância. Maior fan-out, maior a carga e delay. |
+|  | Metastable | Dado passível de metaestabilidade, pode ter um valor incerto, podendo ser o dado anterior ou atual. |
 | _NORA_ | NO-RAce Logic | Técnica de lógica dinâmica que evita condições de corrida entre estágios. |
 | _OTP_ | One-time programmable | Memória programável apenas uma vez, usada para configuração permanente. |
 | _SRAM_ | Static Random Access Memory | Memória rápida baseada em flip-flops, não precisa de refresh. |
@@ -84,43 +84,43 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 | _DTA_ | Dynamic timing Analysis | Técnica para analisar timing do cricuito utilizando vetores de testes, testes específicos, mais lento. |
 | _HDL_ | Hardware Description Language | Linguagem de programação que possui o paradigma de descrever o comportamento de circuitos digitais e estruturasd e hardwares. |
 | _LVF_ | Liberty Variation Format | Extensão do formato Liberty que modela variações estatísticas (processo, tensão, temperatura) para análise de timing mais precisa. |
-| _TLF_ | Timing Library Format | Arquivo que descreve características de timing das células padrão | Entrada (input) para ferramentas de síntese e STA. |
-| _LEF_ | Library Exchange Format | Descreve geometria simplificada das células para uso em place & route | Entrada (input) para ferramentas físicas. |
-| _DSCL_ | Digital Standard Cell Library | Conjunto de células padrão digitais (com lógica, layout e timing) | Base de entrada (input) para todo o fluxo EDA. |
-| _DEF_ | Design Exchange Format | Descreve a implementação física do design (placement, roteamento e conexões) | Saída do place & route e entrada para ferramentas de verificação física. |
-|_LIB_| Liberty Timing File | Arquivo (.lib) que descreve timing, potência e função lógica das células padrão | Entrada (input) para síntese, STA e otimizações
+| _TLF_ | Timing Library Format | Arquivo que descreve características de timing das células padrão |
+| _LEF_ | Library Exchange Format | Descreve geometria simplificada das células para uso em place & route |
+| _DSCL_ | Digital Standard Cell Library | Conjunto de células padrão digitais (com lógica, layout e timing) |
+| _DEF_ | Design Exchange Format | Descreve a implementação física do design (placement, roteamento e conexões) |
+| _LIB_ | Liberty Timing File | Arquivo (.lib) que descreve timing, potência e função lógica das células padrão |
 | _SDC_ | Synopsis Design Constraints | Formato de arquivo padrão, baseado em TCL desenvolvida pela Synopsis, para definir restições de PPA, utilizado no processo de síntese. |
 | _FRAM_ | "Frame" | Similar ao LEF, descreve também o formato físico das células. |
 | _GDSII_ | Graphic Design System II | É o formato padrão de arquivo usado para representar o layout físico (Atual). |
-|_GDSI_| Graphic Design System I | É o formato padrão de arquivo usado para representar o layout físico (Antigo/obsoleto) | 
+| _GDSI_ | Graphic Design System I | É o formato padrão de arquivo usado para representar o layout físico (Antigo/obsoleto) |
 | _OASIS_ | Open Artwork system intechange standard | Outro tipo de formato (Open-source) para representar um design físico. |
 | _ASCII_ | American Standard Code for Information Interchange | É o padrão de codificação de caracteres em valores númericos. |
 | _SCL_ | Standart Cell | São as células padrão caracterizadas pertencentes ao PDK. |
-| _CELL_ | | Quaisquer tipo de "componente" ou unidade de um projeto CI, podendo ser um mux, transitor, etc. |
-| _BUS_ | | Barramento é o meio físico de conexão entre blocos, por onde os sinais passam. Ela é regida por um protcolo, que são as regras de como funciona essa comunicação. |
+|  | CELL | Quaisquer tipo de "componente" ou unidade de um projeto CI, podendo ser um mux, transitor, etc. |
+|  | BUS | Barramento é o meio físico de conexão entre blocos, por onde os sinais passam. Ela é regida por um protcolo, que são as regras de como funciona essa comunicação. |
 | _PI/PO_ | Pins | Pontos de conexões do circuito, seja entrada ou saída. |
-| _GRID_ | Grid | Malha de referência usada no layout para alinhar e posicionar células e interconexões | Base de entrada (input) para ferramentas de layout físico | |
-| _LVS_ | Layout Versus Schematic | Verifica se o layout físico corresponde ao esquemático (conectividade e dispositivos) | Saída do layout e entrada para verificação física (sign-off). |
+| _GRID_ | Grid | Malha de referência usada no layout para alinhar e posicionar células e interconexões |
+| _LVS_ | Layout Versus Schematic | Verifica se o layout físico corresponde ao esquemático (conectividade e dispositivos) |
 | _ESD_ | Electrostatic Discharge | É aquela descarga de eletricidade estática (tipo quando você leva um choque ao tocar algo), que pode danificar o chip, e pinos. |
 | _UPF_ | Unified Power Format | Literalmente, um formato/padrão para descrever como a energia pode-se organizar dentro de um CI. |
 | _TCL_ | Tool Command Language | Linguagem de script usada para automatizar e controlar ferramentas EDA. |
-| _CORE_ | | O coração do CI, ou melhor, o cérebro. Fornece a funcionalidade básica de um circuito integrado. |
+|  | CORE | O coração do CI, ou melhor, o cérebro. Fornece a funcionalidade básica de um circuito integrado. |
 | _HBM_ | Human Body Model | É uma simulação usando o modelo humano quando há uma descarga elétrica no circuito. Pode ser usado em outras ocasiões. |
 | _RTL_ | Register Transfer Level | É um nível de abstração da representação de projetos digitais utilizando HDL na etapa de Design. |
-| _SKEW_ | | É a velocidade de transicação do dado, a diferença entre entre o tempo que o sinal sai e chega. |
+|  | SKEW | É a velocidade de transicação do dado, a diferença entre entre o tempo que o sinal sai e chega. |
 | _DUTY CYCLE_ | Duty Cycle | Razão entre o tempo em nível alto e o período total de um sinal periódico (geralmente em %) Parâmetro de entrada (input) para análise de timing e projeto de clock. |
 | _CTS_ | Clock Tree Synthesis | Etapa do fluxo físico que cria e otimiza a rede de distribuição do sinal de clock no chip. |
 | _PPA_ | Power, Performance, and Area | São as principais métricas para definirmos em um projeto de CI, a partir da especificação do projeto. |
 | _IPs_ | Intellectual Property | São blocos de circuitos projetados, verificados e reutilizeveis em projetos, no qual uma empresa é detentora do seu design. |
-| _Floorplan_ | | Consiste no roteamento de vias que serão utilizadas para alimentação das standard cell. São determinadas as localizações, formas, tamanhos dos módulos do chip e são estimadas a área do chip, atrasos e congestionamentos de fios, dessa maneira fornecendo a base para o leiaute. |
-| _Placement_ | | Trata do processo de alocar as Standard Cells no design proposto. |
-| _Site_ | | Um site é a unidade básica de posicionamento (grid) onde as standard cells podem ser colocadas no layout. |
+|  | Floorplan | Consiste no roteamento de vias que serão utilizadas para alimentação das standard cell. São determinadas as localizações, formas, tamanhos dos módulos do chip e são estimadas a área do chip, atrasos e congestionamentos de fios, dessa maneira fornecendo a base para o leiaute. |
+|  | Placement | Trata do processo de alocar as Standard Cells no design proposto. |
+|  | Site | Um site é a unidade básica de posicionamento (grid) onde as standard cells podem ser colocadas no layout. |
 | _FPGA_ | Field-Programmable Gate Array | Dispositivo reconfigurável composto por blocos lógicos e interconexões programáveis. |
 | _PLD_ | Programmable Logic Device | Categoria de dispositivos digitais programáveis usadas para implementar lógica. |
 | _MPGA_ | Mask Programmable Gate Array | Dispositivo programado por máscara na fabricação, com interconexões definidas na foundry. |
 | _CPLD_ | Complex Programmable Logic Device | PLD com múltiplos blocos lógicos e interconexões previsíveis, bom para controle. |
 | _SPLD_ | Simple Programmable Logic Device | PLD simples com poucos recursos, usado para lógica básica. |
-| _Budget_ | | Uma restrição de projeto, onde definimos o nosso caminho de desenvolvimento, seja ele timing, power ou area. |
+|  | Budget | Uma restrição de projeto, onde definimos o nosso caminho de desenvolvimento, seja ele timing, power ou area. |
 
 ***
 
@@ -137,39 +137,39 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 | _DVT_ | Design Validation Test | Etapa de validação do projeto para verificar se o circuito funciona corretamente antes da fabricação ou entrega final. |
 | _DSM_ | Deep submicron | Refere-se a tecnologias de fabricação com dimensões bem menores que 1 micrômetro. |
 | _tp_ | Timing Path | É um caminho de ponto a ponto. |
-| _Clock group_ | | Grupo de caminhos diferentes do/de sinal/sinais de clock. |
-| _Slack_ | | Diferença entre o tempo necessário e o tempo de checagem (quando negativo = deu ruim). |
-| _Net timing arcs_ | | É o atraso real do caminho, é a soma dos atrasos da rede e célula. |
-| _Net delay_ | | Tempo total necessário para carregar ou descarregar todos os dados parasitas da rede. |
-| _Cell Delay_ | | É o atraso do dado passar da entrada para saída da célula. |
-| _Transparente latch_ | | Circuito de memória que deixa o sinal passar diretamente enquanto o clock está ativo. |
+|  | Clock group | Grupo de caminhos diferentes do/de sinal/sinais de clock. |
+|  | Slack | Diferença entre o tempo necessário e o tempo de checagem (quando negativo = deu ruim). |
+|  | Net timing arcs | É o atraso real do caminho, é a soma dos atrasos da rede e célula. |
+|  | Net delay | Tempo total necessário para carregar ou descarregar todos os dados parasitas da rede. |
+|  | Cell Delay | É o atraso do dado passar da entrada para saída da célula. |
+|  | Transparente latch | Circuito de memória que deixa o sinal passar diretamente enquanto o clock está ativo. |
 | _FF_ | flip-flop | Circuito sequencial acionado pela borda do clock que armazena 1 bit de informação, menor unidade que forma a memória. |
-| _Pusle width_ | | Largura do pulso, tempo que o dado se mantém ativo e inativo. |
-|_tsu_| Setup time | Intervalo de tempo antes da borda de clock no qual o dado deve-se manter estável para não ocorrer metaestabilidade | 
+|  | Pusle width | Largura do pulso, tempo que o dado se mantém ativo e inativo. |
+| _tsu_ | Setup time | Intervalo de tempo antes da borda de clock no qual o dado deve-se manter estável para não ocorrer metaestabilidade |
 | _thd_ | Hold time | Intervalo de tempo depois da borda de clock no qual o dado deve-se manter estável para não ocorrer metaestabilidade. |
-| _Signal slew_ | | Tempo necessário para ocorrer uma transação. |
-| _Pulse Width_ | | Tempo entre o estado atibvo e inativo do clock. |
-| _Clock latency_ | | Diferença entre a skew e slew. |
+|  | Signal slew | Tempo necessário para ocorrer uma transação. |
+|  | Pulse Width | Tempo entre o estado atibvo e inativo do clock. |
+|  | Clock latency | Diferença entre a skew e slew. |
 | _HVT_ | High Threshold Voltage | Transistores com tensão de limiar alta, consumem menos energia mas são mais lentos. Localizados nas Standard Cell. |
 | _RVT_ | Regular Threshold Voltage | Transistores com tensão de limiar padrão, equilibram desempenho e consumo de energia. Localizados nas Standard Cell. |
-| _Clock slew_ | | É a diferença de tempo na chegada do clock em diferentes partes de um circuito digital. |
-| _Clock jitter_ | | É a variação do skew no tmepo. Ele varia o Skew. |
-| _Recovery time_ | | Tempo mínimo em que o reset deve estar desativado antes da borda do clock. (Assíncrono). |
-| _Removal time_ | | Tempo mínimo que o sinal assíncrono, geralmente o reset, deve continuar ativo após a borda do clock. |
-| _Data path_ | | É o caminho do dado da porta de entrada até ff, memória, latct, porta... |
-| _Clock path_ | | É o caminho do pino de clock/memória até o pino de clock sequencial/memória/célula. |
-| _Clock gating path_ | | Clock input port -> Clock gating. |
-| _Asynchronus path_ | | Porta de entrada do projeto até célula sequencial/set/reset. |
-| _Critical path_ | | O caminho mais lento do circuito, usado para determinar a frequência máxima do circuito. |
-|_False path_| | Caminho existente, mas não funcional. | 
-| _Single cycle path_ | | Caminho do circuito que dura menos de um ciclo. |
-| _Multi Cycle path_ | | Caminho de temporização de projeto no qual o sinal pode levar mais de um ciclo. |
-| _Launch path_ | | Caminho do clock usado no ponto inicial do caminho do registrador para registrador. |
-| _Capture path_ | | Caminho do clock usado no ponto final do caminho do registrador para registrador. |
-| _Shortest path_ | | É o caminho de menor tempo, o melhor caso. |
-| _Capactive Crosstalk_ | | Interferência entre dois sinais próximos, causada pela capacitância parasita entre trilhas/fios no circuito. |
-| _Resistive Parasitcs_ | | Resistência parasita relacionado na distribuição da fonte de alimentação. |
-| _IR Drop_ | | Queda de tensão causada pela resistência das trilhas quando a corrente elétrica passa pela alimentação do chip. |
+|  | Clock slew | É a diferença de tempo na chegada do clock em diferentes partes de um circuito digital. |
+|  | Clock jitter | É a variação do skew no tmepo. Ele varia o Skew. |
+|  | Recovery time | Tempo mínimo em que o reset deve estar desativado antes da borda do clock. (Assíncrono). |
+|  | Removal time | Tempo mínimo que o sinal assíncrono, geralmente o reset, deve continuar ativo após a borda do clock. |
+|  | Data path | É o caminho do dado da porta de entrada até ff, memória, latct, porta... |
+|  | Clock path | É o caminho do pino de clock/memória até o pino de clock sequencial/memória/célula. |
+|  | Clock gating path | Clock input port -> Clock gating. |
+|  | Asynchronus path | Porta de entrada do projeto até célula sequencial/set/reset. |
+|  | Critical path | O caminho mais lento do circuito, usado para determinar a frequência máxima do circuito. |
+|  | False path | Caminho existente, mas não funcional. |
+|  | Single cycle path | Caminho do circuito que dura menos de um ciclo. |
+|  | Multi Cycle path | Caminho de temporização de projeto no qual o sinal pode levar mais de um ciclo. |
+|  | Launch path | Caminho do clock usado no ponto inicial do caminho do registrador para registrador. |
+|  | Capture path | Caminho do clock usado no ponto final do caminho do registrador para registrador. |
+|  | Shortest path | É o caminho de menor tempo, o melhor caso. |
+|  | Capactive Crosstalk | Interferência entre dois sinais próximos, causada pela capacitância parasita entre trilhas/fios no circuito. |
+|  | Resistive Parasitcs | Resistência parasita relacionado na distribuição da fonte de alimentação. |
+|  | IR Drop | Queda de tensão causada pela resistência das trilhas quando a corrente elétrica passa pela alimentação do chip. |
 | _IR Noise_ | IR Noise | Variação ou queda indesejada de tensão causada pela resistência da rede de alimentação do chip. |
 | _I/O_ | Input/Output | Interface responsável pela entrada e saída de sinais entre o chip e o ambiente externo. |
 | _PDN_ | Power Distribution Network | Rede de distribuição de energia responsável por levar alimentação elétrica para todas as partes do chip. |
@@ -178,14 +178,14 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 | _GAL_ | Globally Asynchronous Logic | Arquitetura onde diferentes blocos funcionam de forma assíncrona entre si. |
 | _By-Pass Capacitor_ | Bypass Capacitor | Capacitor usado para filtrar ruídos e estabilizar a alimentação elétrica do circuito. |
 | _CDC_ | Clock Domain Crossover | Cruzamento do domínio de clock, é a transferência do sinall de clock em diferentes partes do circuito. |
-| _Metastability_ | | É a instabilidade do sinal em circuitos sequenciais quando o dado muda muito próximo da borda do clock. |
+|  | Metastability | É a instabilidade do sinal em circuitos sequenciais quando o dado muda muito próximo da borda do clock. |
 | _PVT_ | Process Voltage Temperature | Representa as variações físicas e operacionais que afetam o comportamento de um circuito integrado, caracterizado no PDK. Process (Fast/Slow), Voltage (VDD High/ VDDlow), Temperature (High, Slow). |
 | _Corners_ | Process Voltage Temperature | Corners são combinações específicas de PVT (Process, Voltage, Temperature) usadas para analisar o comportamento de um circuito nas condições extremas (pior e melhor caso). |
 | _OCV_ | On-Chip Variation | Variação das características elétricas dentro do próprio chip causada por processo, tensão e temperatura. |
-| _Electromigration_ | | É o deslocamento gradual de átomos de metal de um condutor devido ao alto movimento dos elétrons que colidem com eles, resultando numa alta correteq eu flui pelo condugor podendo causar a conexão em curto ou em aberto. |
+|  | Electromigration | É o deslocamento gradual de átomos de metal de um condutor devido ao alto movimento dos elétrons que colidem com eles, resultando numa alta correteq eu flui pelo condugor podendo causar a conexão em curto ou em aberto. |
 | _MTTF_ | Mean time to failure | É o tempo médio para falha, é a indicação da vida útil do CI. |
-| _Vold_ | | O efeito da eletromigração reduz a densidade de íons em alguns pontos de interconexão causando um vazio, que leva ao circuito aberto. |
-| _Hillock_ | | Protuberância: Aumento da largura da interconexão metálica entre camadas de metal resultando em um curto circuito. |
+|  | Vold | O efeito da eletromigração reduz a densidade de íons em alguns pontos de interconexão causando um vazio, que leva ao circuito aberto. |
+|  | Hillock | Protuberância: Aumento da largura da interconexão metálica entre camadas de metal resultando em um curto circuito. |
 | _NDR_ | Nondefault rules | É o dimensionamento adequado dos nets com regras que não são padrão. |
 | _Nets_ | Nets | Conexões elétricas que interligam células e componentes dentro do circuito digital. |
 | _BJT_ | Bipolar Junction Transistor | Transistor que utiliza elétrons e lacunas para amplificar ou chavear sinais elétricos. |
@@ -195,7 +195,7 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 | _BEOL_ | Back-End of Line | Etapa da fabricação responsável pelas interconexões metálicas entre os dispositivos do chip. |
 | _DIBL_ | Drain Induced Barrier Lowering | Efeito em transistores onde a tensão do dreno reduz a barreira do canal, aumentando leakage. |
 | _GIBL_ | Gate Induced Barrier Lowering | Efeito em que o campo elétrico da porta reduz a barreira do transistor, causando corrente de fuga. |
-| _antenna effect_ | | é um problema de fabricação em circuitos integrados onde cargas elétricas acumuladas durante o processo (plasma) se acumulam em interconexões metálicas e podem danificar o óxido de gate dos transistores. |
+|  | antenna effect | é um problema de fabricação em circuitos integrados onde cargas elétricas acumuladas durante o processo (plasma) se acumulam em interconexões metálicas e podem danificar o óxido de gate dos transistores. |
 | _CMP_ | Chemical mechanical planarization | Processo quimico-mecânico que causa a erosão/rebaixamento no processo de fabricação. |
 | _QoR_ | Quality of Results | Métrica usada para avaliar qualidade do projeto em desempenho, área, potência e timing. |
 | _QoS_ | Quality of Silicon | Qualidade final do chip fabricado considerando desempenho, confiabilidade e consumo. |
@@ -250,14 +250,14 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 | _Storage_ | Storage | Capacidade ou mecanismo usado para armazenar dados e informações digitais. |
 | _Sequential Logic Circuits_ | Sequential Logic Circuits | Circuitos lógicos cuja saída depende das entradas atuais e do estado anterior. |
 | _Combinational Logic Circuits_ | Combinational Logic Circuits | Circuitos lógicos cuja saída depende apenas das entradas atuais. |
-| _edge_ | | É a borda, que é o período de transicação do sinal. (Transitório). |
-| _edge triggerd_ | | Sensível a borda. |
+|  | edge | É a borda, que é o período de transicação do sinal. (Transitório). |
+|  | edge triggerd | Sensível a borda. |
 | _FSM_ | Finite State Machine | Modelo lógico sequencial baseado em estados e transições. |
 | _Mealy Model_ | Mealy Machine | Máquina de estados em que a saída depende do estado atual e das entradas. |
 | _Moore Model_ | Moore Machine | Máquina de estados em que a saída depende apenas do estado atual. |
 | _CU_ | Control Unit | Unidade responsável por controlar e coordenar as operações do sistema digital. |
 | _PU_ | Processing Unit | Unidade responsável pelo processamento e execução das operações de dados. |
-| _Clock gating_ | | Técnica usada em circuitos digitais para economizar energia, desligando sinal de clock em partes do circuito. |
+|  | Clock gating | Técnica usada em circuitos digitais para economizar energia, desligando sinal de clock em partes do circuito. |
 | _ICG_ | Integrated Clock Gating | É uma célula padrão (standard cell) usada em microeletrônica para implementar clock gating de forma segura e sem glitches. |
 | _Minimum Clock_ | Minimum Clock Period | Menor período de clock permitido para o circuito funcionar corretamente sem violar timing. |
 | _Maximum Clock_ | Maximum Clock Frequency | Maior frequência de clock suportada pelo circuito sem erros de timing. |
@@ -274,22 +274,22 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 | ------- | ------ | -----------. |
 | _ASIC_ | Application-Specific Integrated Circuit | CI projetado com finalidade específica. |
 | _Package_ | IC Package | Encapsulamento físico do chip responsável por proteger o die e conectar o circuito ao ambiente externo. |
-| _Pads_ | | São as bordas do chips usadas para conectar sinais de entrada/saída, VDD/GND, comunicações, etc. |
-| _Netlist_ | | É o produto da transformação feita por uma EDA de um RTL, utilizando as constraints do projeto e a tecnologia forneceida (gttech/pdk). |
-| _Gate level_ | | Nível de representação digital em que o circuito é descrito usando portas lógicas e suas conexões. |
+|  | Pads | São as bordas do chips usadas para conectar sinais de entrada/saída, VDD/GND, comunicações, etc. |
+|  | Netlist | É o produto da transformação feita por uma EDA de um RTL, utilizando as constraints do projeto e a tecnologia forneceida (gttech/pdk). |
+|  | Gate level | Nível de representação digital em que o circuito é descrito usando portas lógicas e suas conexões. |
 | _VHSIC_ | Very High-Speed Integrated Circuit | Circuito integrado desenvolvido para operar em alta velocidade. |
 | _VHDL_ | VHSIC Hardware Description Language | Linguagem de descrição de hardware usada para modelar e projetar circuitos digitais. |
-| _ports_ | | É a interface de um módulo. |
-| _architecture_ | | É o que o programador vê, ou seja o que o processador faz. ISA,registradores, tipo de dados.. |
+|  | ports | É a interface de um módulo. |
+|  | architecture | É o que o programador vê, ou seja o que o processador faz. ISA,registradores, tipo de dados.. |
 | _ISA_ | Instruction Set Architecture | Conjunto de instruções implementadas por uma arquitetura computacional. |
-| _microarchitecture_ | | É como a arquitetura é implementada, ou seja, como o processador faz. Pipeline, ALU, Unidade de controle... |
+|  | microarchitecture | É como a arquitetura é implementada, ou seja, como o processador faz. Pipeline, ALU, Unidade de controle... |
 | _DUT_ | Device Under Test | Circuito ou sistema que está sendo testado e verificado durante simulação ou validação. |
 | _Stimulus_ | Stimulus | Conjunto de sinais ou entradas aplicados ao circuito durante testes e simulações. |
 | _Assertions_ | Assertions | Verificações usadas para garantir que o circuito esteja obedecendo condições e comportamentos esperados durante a simulação. |
 | _Semaphore_ | Semaphore | Mecanismo de sincronização usado para controlar acesso a recursos compartilhados entre processos. |
 | _Mailbox_ | Mailbox | Estrutura usada para troca de mensagens entre processos, funcionando como uma fila FIFO. |
-| _Event_ | | Um evento é ação no tempo zero. Ou seja, uma mudança instântanea que ocorre em determinado ponto. |
-| _Constraints_ | | Especificações definida pelo budget do projeto, podendo conter timing, power, etc.. |
+|  | Event | Um evento é ação no tempo zero. Ou seja, uma mudança instântanea que ocorre em determinado ponto. |
+|  | Constraints | Especificações definida pelo budget do projeto, podendo conter timing, power, etc.. |
 | _TBs_ | Testbenchs (wrappers) | Ambiente de verificação que encapsula o projeto para aplicar testes, estímulos e validar o funcionamento do circuito. |
 | _DUV_ | Device Under Verification | Circuito ou sistema que está sendo verificado durante o processo de validação funcional. |
 | _CBS_ | Cycle-Based Simulators | Simuladores que executam o circuito ciclo a ciclo, focando em desempenho para projetos grandes. |
@@ -309,13 +309,13 @@ Lista de abreviaturas utilizadas no meio da microeletrônica;
 | _GUI_ | Graphical User Interface | Interface gráfica que permite interação visual com softwares e sistemas digitais. |
 | _DVE_ | Discovery Visualization Environment | Ferramenta da Synopsys usada para depuração e análise das simulações do RTL. |
 | _SDF_ | Standard Delay Format | Estrutura de dados de saída que contém o atraso real do circuito. |
-|_PDEF_| Physical Definition File | Arquivo de saída/entrada que possui informações físicas do projeto, como dimensões, pinos e posicionamento do chip. | 
+| _PDEF_ | Physical Definition File | Arquivo de saída/entrada que possui informações físicas do projeto, como dimensões, pinos e posicionamento do chip. |
 | _TLU_ | Table Lookup Plus File | Arquivos usadas em análise física para modelar resistência e capacitância das interconexões do chip. |
 | _DFT_ | Design for test | Teste de varredeura é uma técnica de design para testabilidade, onde há inserção de FF de varredaruas durante a síntese, para otmizar síntese, timing e checkar fisicamente o projeto. |
 | _PI_ | Primary Input | Entrada principal de sinais em um circuito digital. |
 | _PO_ | Primary Output | Saída principal de sinais de um circuito digital. |
 | _IDD Test_ | IDD Test | Teste que mede a corrente elétrica consumida pelo circuito para detectar falhas de fabricação ou defeitos. |
-| _Scan Chain_ | | Basicamente a inserção de um FF + MUX no processo de DFT. |
+|  | Scan Chain | Basicamente a inserção de um FF + MUX no processo de DFT. |
 | _LSSD_ | Level-Sensitive Scan Design | Técnica de DFT baseada em latches sensíveis a nível para melhorar testabilidade do circuito. |
 | _BIST_ | Built-In Self-Test | Técnica em que o próprio circuito realiza testes internos automaticamente. |
 | _LFSR_ | Linear Feedback Shift Register | Registrador de deslocamento com realimentação usado para gerar padrões pseudoaleatórios. |
