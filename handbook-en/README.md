@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Mini Dictionary in Microeletronics (EN)
 =======
 # Microelectronics Glossary
